@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfieldback"
+                android:padding="@dimen/twelve"
+                android:hint="User Name"
+                android:layout_margin="@dimen/ten"></EditText>
+
+            <EditText
+                android:id="@+id/edit_MobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfieldback"
+                android:padding="@dimen/twelve"
+                android:hint="phone no"
+                android:layout_margin="@dimen/ten"></EditText>
+
+            <Spinner
+                android:id="@+id/spinner_State"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/ten"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/textfieldback"></Spinner>
+
+            <Spinner
+                android:id="@+id/spinner_City"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/ten"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/textfieldback"></Spinner>
+
+            <Spinner
+                android:id="@+id/spinner_Pincode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_margin="@dimen/ten"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/textfieldback"></Spinner>
+
+            <EditText
+                android:id="@+id/edit_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfieldback"
+                android:padding="@dimen/twelve"
+                android:layout_margin="@dimen/ten"
+                android:hint="address"></EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_Save"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text="Save"
+                    app:backgroundTint="@color/some_color"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15dp"></com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text="Cancel"
+                    app:backgroundTint="@color/some_color"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15dp"></com.google.android.material.button.MaterialButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</layout>

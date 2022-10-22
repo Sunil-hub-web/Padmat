@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/radio_payonline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:text="Pay Online"
+                    android:textColor="@color/some_color3"
+                    android:textSize="@dimen/edittextsize" />
+
+                <RadioButton
+                    android:id="@+id/radio_cashondelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:text="Cash On Delivery"
+                    android:textColor="@color/some_color3"
+                    android:textSize="@dimen/edittextsize" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen"
+                android:text="Address"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/edittextsize"></TextView>
+
+            <TextView
+                android:id="@+id/text_ShowAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/some_color4"
+                android:text="svnjnxzhjcvjbmnzvcnbmnbmnbZBYCnmnmnbbnzgxnbmnbmnbibgdc"
+                android:textSize="@dimen/edittextsize"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_AddnewAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="ADD NEW ADDRESS"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twelve_size"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/some_color"></com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_selectAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="SELECT ADDRESS"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twelve_size"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/some_color5"></com.google.android.material.button.MaterialButton>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ordersummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:text="Order Summary"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/edittextsize"></TextView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/amount"
+            android:layout_below="@+id/value"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@drawable/shocart">
+
+            <LinearLayout
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/image"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/five"
+                    android:layout_weight="1"
+                    android:text="Image"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize"></TextView>
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginLeft="@dimen/thirty"
+                    android:layout_weight="1"
+                    android:text="ProductName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize"></TextView>
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/five"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize"></TextView>
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderSummaryRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_marginLeft="@dimen/fifteen">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_ProceedCheckout"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lin123"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginRight="@dimen/fifteen">
+
+                    <TextView
+                        android:id="@+id/subTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SubTotal"
+                        android:textColor="@color/some_color"
+                        android:textSize="@dimen/edittextsize"
+                        android:layout_margin="@dimen/five"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/shipping_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shipping Charges"
+                        android:layout_margin="@dimen/five"
+                        android:textColor="@color/some_color"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toatl"
+                        android:layout_margin="@dimen/five"
+                        android:textColor="@color/some_color"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin456"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:layout_toLeftOf="@id/lin789">
+
+                    <TextView
+                        android:id="@+id/priceSymbol1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_toLeftOf="@+id/text_subTotalPrice"
+                        android:text="₹"
+                        android:layout_margin="@dimen/five"
+                        android:textColor="@color/some_color"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/priceSymbol2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_toLeftOf="@+id/text_shippingCharges"
+                        android:text="₹"
+                        android:layout_margin="@dimen/five"
+                        android:textColor="@color/some_color"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/priceSymbol3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_toLeftOf="@+id/text_shippingCharges"
+                        android:text="₹"
+                        android:layout_margin="@dimen/five"
+                        android:textColor="@color/some_color"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin789"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/fifteen"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/text_subTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="145.00"
+                        android:textColor="@color/some_color"
+                        android:layout_margin="@dimen/five"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/text_shippingCharges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="5.0"
+                        android:layout_margin="@dimen/five"
+                        android:textColor="@color/some_color1"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/text_TotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Fee"
+                        android:layout_margin="@dimen/five"
+                        android:textColor="@color/some_color"
+                        android:textSize="@dimen/edittextsize"
+                        android:textStyle="bold"></TextView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/btn_ProceedCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:layout_marginTop="@dimen/three"
+            android:layout_marginRight="@dimen/twenty_five"
+            android:layout_marginBottom="27dp"
+            android:padding="@dimen/fifteen"
+            android:text="PROCEED TO CHECKOUT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize"
+            android:textStyle="bold"
+            app:backgroundTint="@color/some_color"></com.google.android.material.button.MaterialButton>
+
+    </RelativeLayout>
+
+
+
+</layout>

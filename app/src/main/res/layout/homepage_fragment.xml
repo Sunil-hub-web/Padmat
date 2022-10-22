@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="6dp">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/two_hundred"
+                        app:sliderAnimationDuration="500"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="500"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#F44336"
+                        app:sliderIndicatorUnselectedColor="#3F51B5"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:text="CateGory Product"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/edittextsize"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/showRecyclerCategory">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hundred"
+                    android:layout_marginTop="@dimen/twenty"
+                    android:background="@drawable/banner2">
+
+                    <!-- <TextView
+                         android:id="@+id/text"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="@dimen/ten"
+                         android:text="You Can Call AnyTime To"
+                         android:textColor="#FFFFFF"
+                         android:textSize="@dimen/edittextsize"
+                         android:textStyle="bold"></TextView>
+
+                     <TextView
+                         android:id="@+id/text1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@id/text"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="@dimen/ten"
+                         android:text="Get Your Product"
+                         android:textColor="#FFFFFF"
+                         android:textSize="@dimen/edittextsize"
+                         android:textStyle="bold"></TextView>
+
+                     <com.google.android.material.button.MaterialButton
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:layout_marginRight="@dimen/ten"
+                         android:text="CALL +91-1800 888 545"
+                         android:textColor="@color/white"
+                         android:textSize="@dimen/ten_size"
+                         android:textStyle="bold"
+                         app:backgroundTint="#DA291C"></com.google.android.material.button.MaterialButton>-->
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bestSelling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:text="Best Selling"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/edittextsize"></TextView>
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/ten"
+                      android:id="@+id/recyclerproduct">
+
+
+                  </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+
+</layout>

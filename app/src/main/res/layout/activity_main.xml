@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/food_still_life">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:alpha="1"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/hundred"
+                android:layout_height="@dimen/sixty"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/foodapplogo"></ImageView>
+
+            <RelativeLayout
+                android:id="@+id/loginsignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/fifty"
+                    android:layout_weight="1"
+                    android:text="LOGIN"
+                    android:textSize="@dimen/twenty_size"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/login"
+                    android:layout_weight="1"
+                    android:text="SIGN UP"
+                    android:textSize="@dimen/twenty_size"
+                    android:textStyle="bold"></TextView>
+
+            </RelativeLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loginsignup"
+                android:layout_marginTop="10dp"></FrameLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hundred"
+            android:layout_margin="@dimen/five">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixty"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/five"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginEnd="@dimen/five"
+                    android:layout_marginBottom="@dimen/five"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/paneer_masala">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/categoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image_category"
+                    android:layout_centerHorizontal="true"
+                    android:text="Paneer"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

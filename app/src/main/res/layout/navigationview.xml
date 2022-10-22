@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/nav_profile_image"
+            android:layout_width="@dimen/hundred"
+            android:layout_height="@dimen/hundred"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            android:src="@drawable/foodapp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/nav_profile_image"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nav_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunil Kumar Dash"
+                android:textSize="@dimen/twenty_five"
+                android:textColor="@color/some_color">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/nav_MobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+91-9178 888 455"
+                android:textSize="@dimen/edittextsize"
+                android:textColor="@color/some_color3">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/twenty_five"
+        android:layout_marginRight="@dimen/twenty"
+        android:layout_below="@id/profile"
+        android:layout_marginTop="@dimen/forty">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_home"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:src="@drawable/home_icon_silhouette"
+                app:tint="@color/some_color6"
+                android:layout_centerVertical="true">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nav_Home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:layout_toRightOf="@+id/image_home"
+                android:textSize="@dimen/edittextsize"
+                android:layout_marginLeft="@dimen/ten"
+                android:textColor="@color/some_color">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/some_color31" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <ImageView
+                android:id="@+id/image_category"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_centerVertical="true"
+                android:src="@drawable/application"
+                app:tint="@color/some_color6">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nav_Categogry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:layout_toRightOf="@+id/image_category"
+                android:textSize="@dimen/edittextsize"
+                android:textColor="@color/some_color"
+                android:layout_marginLeft="@dimen/ten">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/some_color31" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <ImageView
+                android:id="@+id/image_order"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_centerVertical="true"
+                android:src="@drawable/checkout"
+                app:tint="@color/some_color6">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nav_MyOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Order"
+                android:layout_toRightOf="@id/image_order"
+                android:textSize="@dimen/edittextsize"
+                android:textColor="@color/some_color"
+                android:layout_marginLeft="@dimen/ten">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/some_color31" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user"
+                app:tint="@color/some_color6">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nav_Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textSize="@dimen/edittextsize"
+                android:layout_toRightOf="@id/image_profile"
+                android:textColor="@color/some_color"
+                android:layout_marginLeft="@dimen/ten">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/some_color31" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <ImageView
+                android:id="@+id/image_address"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_centerVertical="true"
+                android:src="@drawable/home_address"
+                app:tint="@color/some_color6">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nav_MyAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Address"
+                android:textSize="@dimen/edittextsize"
+                android:layout_toRightOf="@id/image_address"
+                android:textColor="@color/some_color"
+                android:layout_marginLeft="@dimen/ten">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/some_color31" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <ImageView
+                android:id="@+id/image_contact"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_centerVertical="true"
+                android:src="@drawable/phone_book"
+                app:tint="@color/some_color6">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nav_ContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact us"
+                android:textSize="@dimen/edittextsize"
+                android:layout_toRightOf="@id/image_contact"
+                android:textColor="@color/some_color"
+                android:layout_marginLeft="@dimen/ten">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/some_color31" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <ImageView
+                android:id="@+id/image_logout"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:src="@drawable/logout"
+                app:tint="@color/some_color6"
+                android:layout_centerVertical="true">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nav_Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="@dimen/edittextsize"
+                android:textColor="@color/some_color5"
+                android:layout_toRightOf="@id/image_logout"
+                android:layout_marginLeft="@dimen/ten">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

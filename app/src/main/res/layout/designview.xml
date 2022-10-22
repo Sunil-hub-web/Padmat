@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lin123"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginRight="@dimen/fifteen">
+
+            <TextView
+                android:id="@+id/subTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SubTotal"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/five"></TextView>
+
+            <TextView
+                android:id="@+id/shipping_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tax &amp; Fees"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/five"></TextView>
+
+            <TextView
+                android:id="@+id/delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/five"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin456"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/fifteen"
+            android:layout_toLeftOf="@id/lin789">
+
+            <TextView
+                android:id="@+id/priceSymbol1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:layout_margin="@dimen/five"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/priceSymbol2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/shipping_Name"
+                android:text="₹"
+                android:layout_margin="@dimen/five"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/priceSymbol3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:layout_margin="@dimen/five"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin789"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginTop="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/text_subTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/priceSymbol1"
+                android:text="145.00"
+                android:layout_margin="@dimen/five"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/text_taxandfee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/priceSymbol2"
+                android:text="0"
+                android:layout_margin="@dimen/five"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/text_deliveryPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/priceSymbol3"
+                android:text="1"
+                android:layout_margin="@dimen/five"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold"></TextView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

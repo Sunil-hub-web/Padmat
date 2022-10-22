@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable-v24/addback.xml" value="0.1265" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable-v24/ic_search_black_24dp.xml" value="0.123" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable-v24/textfieldback.xml" value="0.161" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/add_bg.xml" value="0.1655" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/bg_overlay.xml" value="0.1165" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/box.xml" value="0.1655" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/btn_cart.xml" value="0.1655" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/btn_minus__count.xml" value="0.1655" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/btn_plus_count.xml" value="0.1655" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/cardback.xml" value="0.1165" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/homecard_back.xml" value="0.1165" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/ic_arrow_drop_down_black_24dp.xml" value="0.1655" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/layoutback.xml" value="0.111" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/search.xml" value="0.111" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/selectaddressback.xml" value="0.1165" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/selector.xml" value="0.111" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/shocart.xml" value="0.1265" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/textback.xml" value="0.1165" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_desh_board.xml" value="0.20677083333333332" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.5238970588235294" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_login_page.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_register_page.xml" value="0.21979166666666666" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_search.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_show_your_order_details.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/addaddressdetails.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/address_item_layout.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/addressdetails.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/cartpage.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/cartpagedetails.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/category_item_layout.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/categorypage.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/checkoutpage.xml" value="0.22" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/combolist_layout.xml" value="0.18" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/condition_logout.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/contactsupport.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/designview.xml" value="0.25" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/fragment_sub_category_product.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/homepage_fragment.xml" value="0.21979166666666666" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/image_slider_layout_item.xml" value="0.18" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/liimrsupport.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/myorderd.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/myorderdetails.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/navigationview.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/orderdetails.xml" value="0.3469387755102041" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/orderhistory_item.xml" value="0.1" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/orderhistory_items.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/personal_information.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/progress_dialog.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/restaurant_item_layout.xml" value="0.18518518518518517" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/showproduct_details.xml" value="0.25" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/spinnerdropdownitem.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/spinnerfront2.xml" value="0.1" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/sub_cat_item.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/textfieldback.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/tollbar.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/variationrecycler_layout.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/menu/menu_navigation.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.173" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
