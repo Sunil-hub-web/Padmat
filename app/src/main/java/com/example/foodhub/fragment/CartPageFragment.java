@@ -127,12 +127,12 @@ public class CartPageFragment extends Fragment {
 
         favouritesBeanSampleList = sharedPreference.loadFavorites(getActivity());
 
-        int cartcount = favouritesBeanSampleList.size();
+/*        int cartcount = favouritesBeanSampleList.size();
 
         String count = String.valueOf(cartcount);
 
-        Log.d("hsagi",count);
-        DeshBoard.text_ItemCount.setText(count);
+        Log.d("hsagi",count);*/
+        //DeshBoard.text_ItemCount.setText(count);
 
         try {
             if (favouritesBeanSampleList.size() != 0) {

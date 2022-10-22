@@ -254,7 +254,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
                         String count = String.valueOf(cartcount);
 
                         Log.d("hsagi",count);
-                        DeshBoard.text_ItemCount.setText(count);
+                       // DeshBoard.text_ItemCount.setText(count);
 
                        // ItemCounter();
                     }

@@ -40,7 +40,7 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
-            android:layout_toLeftOf="@id/img_Cart"
+            android:layout_alignParentRight="true"
             android:onClick="Serachpage"
             android:src="@drawable/search"
             app:tint="@color/some_color3">
@@ -103,7 +103,7 @@
         </RelativeLayout>
 
 
-        <ImageView
+     <!--   <ImageView
             android:id="@+id/img_Cart"
             android:layout_width="@dimen/twenty_five"
             android:layout_height="@dimen/twenty_five"
@@ -113,9 +113,9 @@
             android:src="@drawable/cart"
             app:tint="@color/some_color3">
 
-        </ImageView>
+        </ImageView>-->
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/text_ItemCount"
             android:layout_width="@dimen/thirty"
             android:layout_height="@dimen/thirty"
@@ -127,7 +127,7 @@
             android:text="12"
             android:textColor="@color/some_color5"
             android:textSize="@dimen/twelve_size"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
 
 
     </RelativeLayout>

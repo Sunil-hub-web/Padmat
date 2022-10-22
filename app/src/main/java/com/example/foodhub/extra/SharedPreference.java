@@ -126,22 +126,31 @@ public class SharedPreference {
 
     public double getCartAmount(Context context){
 
-        itms = new ArrayList<>();
+        if(itms.isEmpty()){
 
-        itms.clear();
+            return 0;
 
-        itms = loadFavorites(context);
-        for (int j = 0; j < itms.size(); j++) {
+        }else{
+
+            itms = new ArrayList<>();
+
+            itms.clear();
+
+            itms = loadFavorites(context);
+            for (int j = 0; j < itms.size(); j++) {
 
 
-            CartItem cartIt = itms.get(j);
+                CartItem cartIt = itms.get(j);
 
-            sum = sum + (Double.parseDouble(cartIt.getSales_price())* Double.parseDouble(cartIt.getQuantity()));
+                sum = sum + (Double.parseDouble(cartIt.getSales_price())* Double.parseDouble(cartIt.getQuantity()));
 //            itemtotal.setText("₹"+sum);
 //                shippingsum = shippingsum + Double.parseDouble(cartIt.getShipingcost());
-        }
+            }
 
-        return sum;
+            return sum;
+
+
+        }
 
     }
 

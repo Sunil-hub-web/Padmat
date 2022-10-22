@@ -44,10 +44,10 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
 
 
     public static TextView nav_MyOrder,text_name,nav_Profile,nav_MyAddress,nav_Home,
-            nav_Logout,nav_Name,nav_MobileNo,text_ItemCount,nav_ContactUs,
+            nav_Logout,nav_Name,nav_MobileNo,nav_ContactUs,
             text_addressName,nav_Categogry;
 
-    public static ImageView search,img_Cart;
+    public static ImageView search;
 
     CircleImageView profile_image;
 
@@ -95,8 +95,8 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
         //loc = findViewById(R.id.loc);
         //logo = findViewById(R.id.logo);
         search = findViewById(R.id.image_search);
-        img_Cart = findViewById(R.id.img_Cart);
-        text_ItemCount = findViewById(R.id.text_ItemCount);
+        //img_Cart = findViewById(R.id.img_Cart);
+        //text_ItemCount = findViewById(R.id.text_ItemCount);
         //text_address = findViewById(R.id.text_address);
         rle_click = findViewById(R.id.rle_click);
         text_name = findViewById(R.id.text_AddressName);
@@ -126,14 +126,14 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
 
         sharedPreference = new SharedPreference();
 
-        itms = sharedPreference.loadFavorites(DeshBoard.this);
+      /*  itms = sharedPreference.loadFavorites(DeshBoard.this);
 
         int cartcount = itms.size();
 
         String count = String.valueOf(cartcount);
 
         Log.d("hsagi",count);
-        text_ItemCount.setText(count);
+        text_ItemCount.setText(count);*/
 
         nav_MyOrder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,7 +202,7 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
             }
         });
 
-        img_Cart.setOnClickListener(new View.OnClickListener() {
+        /*img_Cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -220,7 +220,7 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
 
 
             }
-        });
+        });*/
 
         nav_MyAddress.setOnClickListener(view1 -> {
 
