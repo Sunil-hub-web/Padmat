@@ -24,7 +24,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:textSize="15dp"
-                android:textColor="@color/some_color3">
+                android:textColor="@color/some_color3"
+                android:fontFamily="@font/sans_regular">
 
             </TextView>
 
@@ -55,7 +56,8 @@
                         android:padding="@dimen/ten"
                         android:textSize="@dimen/edittextsize"
                         android:textColor="#4C92D8"
-                        android:inputType="text"/>
+                        android:inputType="text"
+                        android:fontFamily="@font/sans_regular"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,7 +79,8 @@
                         android:padding="@dimen/ten"
                         android:textSize="@dimen/edittextsize"
                         android:textColor="#4C92D8"
-                        android:inputType="phone"/>
+                        android:inputType="phone"
+                        android:fontFamily="@font/sans_regular"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,7 +102,8 @@
                         android:padding="@dimen/ten"
                         android:textSize="@dimen/edittextsize"
                         android:textColor="#4C92D8"
-                        android:inputType="textEmailAddress"/>
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/sans_regular"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,7 +149,8 @@
                         android:padding="@dimen/ten"
                         android:textSize="@dimen/edittextsize"
                         android:inputType="textPassword"
-                        android:textColor="#4C92D8"/>
+                        android:textColor="#4C92D8"
+                        android:fontFamily="@font/sans_regular"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +161,8 @@
                     android:layout_marginLeft="@dimen/ten"
                     android:layout_marginRight="@dimen/ten"
                     android:layout_marginTop="@dimen/ten"
-                    android:id="@+id/termsconditions">
+                    android:id="@+id/termsconditions"
+                    android:fontFamily="@font/sans_regular">
 
                 </CheckBox>
 
@@ -172,7 +178,8 @@
                     app:backgroundTint="@color/some_color"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="15dp"></com.google.android.material.button.MaterialButton>
+                    android:textSize="15dp"
+                    android:fontFamily="@font/sans_bold"></com.google.android.material.button.MaterialButton>
 
             </LinearLayout>
 

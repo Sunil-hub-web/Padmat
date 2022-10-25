@@ -19,12 +19,13 @@
             android:id="@+id/heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_centerInParent="true"
-            android:text="Recomended"
             android:layout_marginLeft="@dimen/forty"
+            android:gravity="center_vertical"
+            android:text="Recomended"
             android:textColor="@color/black"
-            android:textSize="@dimen/fourteen" />
+            android:textSize="@dimen/fourteen"
+            android:fontFamily="@font/rupee_foradian"/>
 
     </RelativeLayout>
 

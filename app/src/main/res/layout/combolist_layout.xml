@@ -48,7 +48,8 @@
                     android:paddingLeft="@dimen/ten"
                     android:text="Top Restaurants"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/fifteen" />
+                    android:textSize="@dimen/fifteen"
+                    android:fontFamily="@font/sans_bold"/>
 
 
                 <LinearLayout
@@ -67,7 +68,8 @@
                         android:singleLine="true"
                         android:text="Rs. 1520.00"
                         android:textColor="@color/some_color5"
-                        android:textSize="@dimen/twelve" />
+                        android:textSize="@dimen/twelve"
+                        android:fontFamily="@font/roboto_thin"/>
 
                     <TextView
                         android:id="@+id/discount"
@@ -78,7 +80,8 @@
                         android:paddingLeft="@dimen/eight"
                         android:text="4.0*"
                         android:textColor="@color/some_color3"
-                        android:textSize="@dimen/eleven" />
+                        android:textSize="@dimen/eleven"
+                        android:fontFamily="@font/raleway"/>
 
                 </LinearLayout>
 
@@ -103,7 +106,8 @@
                     android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                     android:drawableTint="@color/some_color"
                     android:gravity="center"
-                    android:textSize="@dimen/thirteen">
+                    android:textSize="@dimen/thirteen"
+                    android:fontFamily="@font/sans_regular">
 
                 </TextView>
 
@@ -141,7 +145,8 @@
                             android:gravity="center"
                             android:text="Add"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/fourteen" />
+                            android:textSize="@dimen/fourteen"
+                            android:fontFamily="@font/sans_bold"/>
 
 
                     </LinearLayout>
@@ -164,7 +169,8 @@
                             android:gravity="center"
                             android:text="-"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/eighteen" />
+                            android:textSize="@dimen/eighteen"
+                            android:fontFamily="@font/roboto_thin"/>
 
                         <TextView
                             android:id="@+id/tv_count"
@@ -175,7 +181,8 @@
                             android:gravity="center"
                             android:text="0"
                             android:textColor="@color/some_color1"
-                            android:textSize="@dimen/twelve" />
+                            android:textSize="@dimen/twelve"
+                            android:fontFamily="@font/roboto_thin"/>
 
                         <TextView
                             android:id="@+id/tv_plus"
@@ -186,7 +193,8 @@
                             android:gravity="center"
                             android:text="+"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/fifteen" />
+                            android:textSize="@dimen/fifteen"
+                            android:fontFamily="@font/roboto_thin"/>
 
                     </LinearLayout>
 
@@ -202,7 +210,8 @@
                     android:padding="5dp"
                     android:text="Out of Stock"
                     android:textColor="@color/black"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:fontFamily="@font/rupee_foradian"/>
 
             </RelativeLayout>
 

@@ -37,7 +37,8 @@
                     android:layout_centerHorizontal="true"
                     android:text="Paneer"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/fifteen">
+                    android:textSize="@dimen/fifteen"
+                    android:fontFamily="@font/sans_bold">
 
                 </TextView>
 

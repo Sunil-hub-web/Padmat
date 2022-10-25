@@ -767,7 +767,7 @@
             android:text="Checkout"
             android:textColor="@color/white"
             android:textSize="@dimen/sixteen"
-            android:textStyle="bold" />
+            android:fontFamily="@font/sans_bold" />
 
     </RelativeLayout>
 

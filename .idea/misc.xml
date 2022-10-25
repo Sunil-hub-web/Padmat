@@ -22,7 +22,7 @@
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/shocart.xml" value="0.1265" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/textback.xml" value="0.1165" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_desh_board.xml" value="0.20677083333333332" />
-        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.5238970588235294" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_login_page.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_register_page.xml" value="0.21979166666666666" />
@@ -49,14 +49,15 @@
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/myorderdetails.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/navigationview.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/orderdetails.xml" value="0.3469387755102041" />
-        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/orderhistory_item.xml" value="0.1" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/orderhistory_item.xml" value="0.22" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/orderhistory_items.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/personal_information.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/progress_dialog.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/restaurant_item_layout.xml" value="0.18518518518518517" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/showproduct_details.xml" value="0.25" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/spinnerdropdownitem.xml" value="0.22083333333333333" />
-        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/spinnerfront2.xml" value="0.1" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/spinnerfront2.xml" value="0.22" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/spinneritem.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/sub_cat_item.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/textfieldback.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/tollbar.xml" value="0.22083333333333333" />

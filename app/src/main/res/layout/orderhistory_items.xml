@@ -38,7 +38,8 @@
                 android:padding="@dimen/two"
                 android:text="patanjali chbanprash  (10 Kg)"
                 android:textColor="#555555"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:fontFamily="@font/sans_regular"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -50,11 +51,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:text="Rs. 200"
                     android:layout_centerInParent="true"
+                    android:text="Rs. 200"
                     android:textColor="@color/some_color1"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/sans_regular"/>
 
                 <TextView
                     android:id="@+id/tv_product_weight"

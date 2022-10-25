@@ -49,6 +49,7 @@
                     android:layout_below="@+id/view2"
                     android:layout_marginLeft="@dimen/fifteen"
                     android:layout_marginTop="@dimen/fifteen"
+                    android:fontFamily="@font/sans_regular"
                     android:text="CateGory Product"
                     android:textColor="@color/black"
                     android:textSize="@dimen/edittextsize"></TextView>
@@ -58,9 +59,9 @@
                     android:layout_height="wrap_content">
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/showRecyclerCategory"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/showRecyclerCategory">
+                        android:layout_height="wrap_content">
 
                     </androidx.recyclerview.widget.RecyclerView>
 
@@ -122,16 +123,17 @@
                     android:layout_marginTop="@dimen/fifteen"
                     android:text="Best Selling"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/edittextsize"></TextView>
+                    android:textSize="@dimen/edittextsize"
+                    android:fontFamily="@font/sans_regular"></TextView>
 
-                  <androidx.recyclerview.widget.RecyclerView
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/ten"
-                      android:id="@+id/recyclerproduct">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerproduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten">
 
 
-                  </androidx.recyclerview.widget.RecyclerView>
+                </androidx.recyclerview.widget.RecyclerView>
 
             </LinearLayout>
 

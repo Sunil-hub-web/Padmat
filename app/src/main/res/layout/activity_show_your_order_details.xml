@@ -26,9 +26,9 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="Show Product Details"
+            android:textColor="@color/some_color"
             android:textSize="@dimen/edittextsize"
-            android:textStyle="bold"
-            android:textColor="@color/some_color"/>
+            android:fontFamily="@font/sans_bold" />
 
         <RelativeLayout
             android:id="@+id/btn_dismiss"

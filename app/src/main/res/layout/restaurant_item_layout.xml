@@ -61,6 +61,7 @@
                 android:maxLines="2"
                 android:text="Paneer Roll"
                 android:textColor="@color/black"
+                android:fontFamily="@font/sans_bold"
                 android:textSize="@dimen/fourteen" />
         </RelativeLayout>
 
@@ -82,6 +83,7 @@
                 android:drawableTint="@color/some_color"
                 android:gravity="center"
                 android:text=""
+                android:fontFamily="@font/sans_regular"
                 android:textSize="@dimen/thirteen">
 
             </TextView>
@@ -105,6 +107,7 @@
                 android:paddingLeft="@dimen/five"
                 android:paddingRight="@dimen/five"
                 android:text="Rs "
+                android:fontFamily="@font/sans_regular"
                 android:textColor="@color/some_color3"
                 android:textSize="@dimen/thirteen" />
 
@@ -139,7 +142,8 @@
                             android:gravity="center"
                             android:text="Add"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/fourteen" />
+                            android:textSize="@dimen/fourteen"
+                            android:fontFamily="@font/sans_bold"/>
 
 
                     </LinearLayout>
@@ -162,7 +166,8 @@
                             android:gravity="center"
                             android:text="-"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/eighteen" />
+                            android:textSize="@dimen/eighteen"
+                            android:fontFamily="@font/rupee_foradian"/>
 
                         <TextView
                             android:id="@+id/tv_count"
@@ -173,7 +178,8 @@
                             android:gravity="center"
                             android:text="0"
                             android:textColor="@color/some_color"
-                            android:textSize="@dimen/twelve" />
+                            android:textSize="@dimen/twelve"
+                            android:fontFamily="@font/rupee_foradian"/>
 
                         <TextView
                             android:id="@+id/tv_plus"
@@ -184,7 +190,8 @@
                             android:gravity="center"
                             android:text="+"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/fifteen" />
+                            android:textSize="@dimen/fifteen"
+                            android:fontFamily="@font/rupee_foradian"/>
 
                     </LinearLayout>
 
@@ -200,7 +207,8 @@
                     android:padding="5dp"
                     android:text="Out of Stock"
                     android:textColor="@color/black"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:fontFamily="@font/sans_regular"/>
 
             </RelativeLayout>
 

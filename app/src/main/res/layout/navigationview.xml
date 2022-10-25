@@ -34,7 +34,8 @@
                 android:layout_height="wrap_content"
                 android:text="Sunil Kumar Dash"
                 android:textSize="@dimen/twenty_five"
-                android:textColor="@color/some_color">
+                android:textColor="@color/some_color"
+                android:fontFamily="@font/sans_bold">
 
             </TextView>
 
@@ -44,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:text="+91-9178 888 455"
                 android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_regular"
                 android:textColor="@color/some_color3">
 
             </TextView>
@@ -79,11 +81,12 @@
                 android:id="@+id/nav_Home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Home"
-                android:layout_toRightOf="@+id/image_home"
-                android:textSize="@dimen/edittextsize"
                 android:layout_marginLeft="@dimen/ten"
-                android:textColor="@color/some_color">
+                android:layout_toRightOf="@+id/image_home"
+                android:text="Home"
+                android:textColor="@color/some_color"
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_regular">
 
             </TextView>
 
@@ -115,11 +118,12 @@
                 android:id="@+id/nav_Categogry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Category"
+                android:layout_marginLeft="@dimen/ten"
                 android:layout_toRightOf="@+id/image_category"
-                android:textSize="@dimen/edittextsize"
+                android:text="Category"
                 android:textColor="@color/some_color"
-                android:layout_marginLeft="@dimen/ten">
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_regular">
 
             </TextView>
 
@@ -151,11 +155,12 @@
                 android:id="@+id/nav_MyOrder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="My Order"
+                android:layout_marginLeft="@dimen/ten"
                 android:layout_toRightOf="@id/image_order"
-                android:textSize="@dimen/edittextsize"
+                android:text="My Order"
                 android:textColor="@color/some_color"
-                android:layout_marginLeft="@dimen/ten">
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_regular">
 
             </TextView>
 
@@ -187,11 +192,12 @@
                 android:id="@+id/nav_Profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="My Profile"
-                android:textSize="@dimen/edittextsize"
+                android:layout_marginLeft="@dimen/ten"
                 android:layout_toRightOf="@id/image_profile"
+                android:text="My Profile"
                 android:textColor="@color/some_color"
-                android:layout_marginLeft="@dimen/ten">
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_regular">
 
             </TextView>
 
@@ -223,11 +229,12 @@
                 android:id="@+id/nav_MyAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="My Address"
-                android:textSize="@dimen/edittextsize"
+                android:layout_marginLeft="@dimen/ten"
                 android:layout_toRightOf="@id/image_address"
+                android:text="My Address"
                 android:textColor="@color/some_color"
-                android:layout_marginLeft="@dimen/ten">
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_regular">
 
             </TextView>
 
@@ -259,11 +266,12 @@
                 android:id="@+id/nav_ContactUs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contact us"
-                android:textSize="@dimen/edittextsize"
+                android:layout_marginLeft="@dimen/ten"
                 android:layout_toRightOf="@id/image_contact"
+                android:text="Contact us"
                 android:textColor="@color/some_color"
-                android:layout_marginLeft="@dimen/ten">
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_regular">
 
             </TextView>
 
@@ -295,11 +303,12 @@
                 android:id="@+id/nav_Logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Logout"
-                android:textSize="@dimen/edittextsize"
-                android:textColor="@color/some_color5"
+                android:layout_marginLeft="@dimen/ten"
                 android:layout_toRightOf="@id/image_logout"
-                android:layout_marginLeft="@dimen/ten">
+                android:text="Logout"
+                android:textColor="@color/some_color5"
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/sans_bold">
 
             </TextView>
 

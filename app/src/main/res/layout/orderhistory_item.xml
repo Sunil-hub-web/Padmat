@@ -26,18 +26,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="#GR001"
-                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold"
+                    android:fontFamily="@font/sans_bold"/>
 
                 <TextView
                     android:id="@+id/orderdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="21 May 2020"
                     android:layout_alignParentRight="true"
+                    android:text="21 May 2020"
+                    android:textColor="@color/black"
                     android:textSize="13sp"
-                    android:textColor="@color/black"/>
+                    android:fontFamily="@font/sans_regular"/>
 
 
             </RelativeLayout>
@@ -54,7 +56,8 @@
                     android:layout_height="wrap_content"
                     android:text="Status : Accepted"
                     android:textSize="13sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sans_regular"/>
 
 
             </RelativeLayout>
@@ -70,7 +73,8 @@
                     android:layout_height="wrap_content"
                     android:text="Status : Accepted"
                     android:textSize="13sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sans_regular"/>
 
                 <TextView
                     android:id="@+id/totalamt"
@@ -79,7 +83,8 @@
                     android:text="Rs. 248"
                     android:layout_alignParentRight="true"
                     android:textSize="13sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sans_regular"/>
 
 
             </RelativeLayout>

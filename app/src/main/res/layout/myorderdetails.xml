@@ -7,7 +7,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/ten"
+        android:layout_marginStart="@dimen/ten"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginEnd="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten"
         android:background="@drawable/homecard_back1"
         android:elevation="15dp">
 
@@ -23,9 +26,10 @@
             android:id="@+id/text_ProdectName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="@dimen/five"
             android:layout_toRightOf="@id/productImage"
+            android:fontFamily="@font/sans_bold"
             android:text="Chiken"
             android:textColor="@color/some_color"
             android:textSize="@dimen/edittextsize"
@@ -49,9 +53,10 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/ten"
+                    android:fontFamily="@font/roboto_thin"
                     android:text="Order Id : "
                     android:textColor="@color/some_color31"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/fourteen"
                     android:textStyle="bold" />
 
                 <TextView
@@ -61,9 +66,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/five"
                     android:layout_toRightOf="@+id/orderId"
+                    android:fontFamily="@font/roboto_thin"
                     android:text="dsafgghhh"
                     android:textColor="@color/some_color31"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/fourteen"
                     android:textStyle="bold"></TextView>
             </RelativeLayout>
 
@@ -76,9 +82,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/ten"
+                    android:fontFamily="@font/roboto_thin"
                     android:text="Order Date : "
                     android:textColor="@color/some_color31"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/fourteen"
                     android:textStyle="bold"></TextView>
 
                 <TextView
@@ -88,9 +95,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/five"
                     android:layout_toRightOf="@+id/orderDate"
+                    android:fontFamily="@font/roboto_thin"
                     android:text="dsafgghhh"
                     android:textColor="@color/some_color31"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/fourteen"
                     android:textStyle="bold"></TextView>
             </RelativeLayout>
 
@@ -104,9 +112,10 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/ten"
+                    android:fontFamily="@font/roboto_thin"
                     android:text="Order Status : "
                     android:textColor="@color/some_color31"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/fourteen"
                     android:textStyle="bold" />
 
                 <TextView
@@ -116,9 +125,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/five"
                     android:layout_toRightOf="@+id/orderStatus"
+                    android:fontFamily="@font/roboto_thin"
                     android:text="dsafgghhh"
                     android:textColor="@color/some_color31"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/fourteen"
                     android:textStyle="bold"></TextView>
             </RelativeLayout>
 
@@ -128,8 +138,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/ten"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ten">
 
             <TextView
                 android:id="@+id/totalunit"
@@ -137,10 +147,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty"
                 android:layout_marginTop="@dimen/ten"
+                android:fontFamily="@font/sans_bold"
                 android:text="250gm"
                 android:textColor="@color/some_color5"
-                android:textSize="@dimen/textsize"
-                android:textStyle="bold"></TextView>
+                android:textSize="@dimen/textsize"></TextView>
 
             <TextView
                 android:id="@+id/totalPrice"
@@ -149,6 +159,7 @@
                 android:layout_below="@+id/totalunit"
                 android:layout_marginLeft="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
+                android:fontFamily="@font/sans_bold"
                 android:text="500.00"
                 android:textColor="@color/some_color5"
                 android:textSize="@dimen/textsize"
@@ -160,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/totalunit"
                 android:layout_marginTop="@dimen/five"
+                android:fontFamily="@font/sans_bold"
                 android:text="Rs."
                 android:textColor="@color/some_color5"
                 android:textSize="@dimen/textsize"

@@ -28,7 +28,8 @@
         android:text="Select Variation"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="@dimen/thirteen"/>
+        android:textSize="@dimen/thirteen"
+        android:fontFamily="@font/rupee_foradian"/>
 
         <View
             android:layout_width="match_parent"

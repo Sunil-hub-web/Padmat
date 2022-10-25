@@ -20,7 +20,8 @@
                 android:layout_gravity="center_horizontal"
                 android:text="We are here to support you for all your"
                 android:textColor="@color/some_color"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/raleway">
 
             </TextView>
 
@@ -31,7 +32,8 @@
                 android:textSize="@dimen/edittextsize"
                 android:text="queries/Doubts"
                 android:layout_gravity="center_horizontal"
-                android:layout_below="@id/t1">
+                android:layout_below="@id/t1"
+                android:fontFamily="@font/raleway">
 
             </TextView>
 
@@ -48,7 +50,8 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Call Us :"
                     android:textColor="@color/some_color5"
-                    android:textSize="@dimen/edittextsize">
+                    android:textSize="@dimen/edittextsize"
+                    android:fontFamily="@font/sans_bold">
 
                 </TextView>
 
@@ -61,7 +64,8 @@
                     android:drawablePadding="@dimen/twelve"
                     android:text="123456789"
                     android:textColor="@color/some_color"
-                    android:textSize="@dimen/edittextsize">
+                    android:textSize="@dimen/edittextsize"
+                    android:fontFamily="@font/raleway">
 
                 </TextView>
 
@@ -92,7 +96,8 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Email Us :"
                     android:textColor="@color/some_color4"
-                    android:textSize="@dimen/edittextsize">
+                    android:textSize="@dimen/edittextsize"
+                    android:fontFamily="@font/sans_bold">
 
                 </TextView>
 
@@ -105,7 +110,8 @@
                     android:drawablePadding="@dimen/twelve"
                     android:text="foodhub@gmail.com"
                     android:textColor="@color/some_color"
-                    android:textSize="@dimen/edittextsize">
+                    android:textSize="@dimen/edittextsize"
+                    android:fontFamily="@font/raleway">
 
                 </TextView>
 

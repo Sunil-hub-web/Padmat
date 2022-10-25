@@ -6,13 +6,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/sixty">
+        android:layout_height="@dimen/fifty">
 
 
         <ImageView
             android:id="@+id/menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/forty"
+            android:layout_height="@dimen/forty"
             android:layout_marginTop="@dimen/ten"
             android:layout_marginRight="@dimen/five"
             android:onClick="Clickmenu"
@@ -37,10 +37,10 @@
             android:id="@+id/image_search"
             android:layout_width="@dimen/thirty"
             android:layout_height="@dimen/thirty"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
-            android:layout_alignParentRight="true"
             android:onClick="Serachpage"
             android:src="@drawable/search"
             app:tint="@color/some_color3">
@@ -82,10 +82,13 @@
                 android:id="@+id/text_AddressName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
                 android:layout_marginTop="@dimen/ten"
+                android:fontFamily="@font/sans_bold"
                 android:text="Home"
                 android:textColor="#22647E"
                 android:textSize="@dimen/textsize"
+
                 android:textStyle="bold"></TextView>
 
             <!--  <TextView
@@ -103,7 +106,7 @@
         </RelativeLayout>
 
 
-     <!--   <ImageView
+        <!--   <ImageView
             android:id="@+id/img_Cart"
             android:layout_width="@dimen/twenty_five"
             android:layout_height="@dimen/twenty_five"
@@ -115,7 +118,7 @@
 
         </ImageView>-->
 
-       <!-- <TextView
+        <!-- <TextView
             android:id="@+id/text_ItemCount"
             android:layout_width="@dimen/thirty"
             android:layout_height="@dimen/thirty"

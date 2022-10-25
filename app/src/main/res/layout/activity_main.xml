@@ -20,8 +20,8 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="@dimen/hundred"
-                android:layout_height="@dimen/sixty"
+                android:layout_width="@dimen/ninety"
+                android:layout_height="@dimen/fifty"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/foodapplogo"></ImageView>
@@ -42,8 +42,8 @@
                     android:layout_marginRight="@dimen/fifty"
                     android:layout_weight="1"
                     android:text="LOGIN"
-                    android:textSize="@dimen/twenty_size"
-                    android:textStyle="bold"></TextView>
+                    android:textSize="@dimen/edittextsize"
+                    android:fontFamily="@font/sans_bold"></TextView>
 
                 <TextView
                     android:id="@+id/signup"
@@ -54,8 +54,8 @@
                     android:layout_toRightOf="@id/login"
                     android:layout_weight="1"
                     android:text="SIGN UP"
-                    android:textSize="@dimen/twenty_size"
-                    android:textStyle="bold"></TextView>
+                    android:textSize="@dimen/edittextsize"
+                    android:fontFamily="@font/sans_bold"></TextView>
 
             </RelativeLayout>
 

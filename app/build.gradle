@@ -61,6 +61,7 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.4'
 
+    implementation 'io.sentry:sentry-android:6.6.0'
 
 
 }

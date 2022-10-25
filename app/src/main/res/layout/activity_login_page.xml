@@ -21,7 +21,8 @@
                 android:layout_marginTop="@dimen/ten"
                 android:text="This is mamdatary in order to complete and stand a"
                 android:textColor="@color/some_color3"
-                android:textSize="15dp"></TextView>
+                android:textSize="15dp"
+                android:fontFamily="@font/sans_regular"></TextView>
 
             <TextView
                 android:id="@+id/text1"
@@ -31,7 +32,8 @@
                 android:layout_marginTop="5dp"
                 android:text="chance to get rewarded"
                 android:textColor="@color/some_color3"
-                android:textSize="15dp"></TextView>
+                android:textSize="15dp"
+                android:fontFamily="@font/sans_regular"></TextView>
 
             <LinearLayout
                 android:id="@+id/card"
@@ -49,7 +51,7 @@
                     android:layout_marginLeft="@dimen/ten"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="@dimen/ten"
-                    android:hint="Enter Username"
+                    android:hint="Enter Mobile No"
                     app:boxStrokeColor="#94979A"
                     app:hintTextColor="#94979A">
 
@@ -60,7 +62,8 @@
                         android:inputType="text"
                         android:padding="@dimen/ten"
                         android:textColor="#4C92D8"
-                        android:textSize="@dimen/edittextsize" />
+                        android:textSize="@dimen/edittextsize"
+                        android:fontFamily="@font/sans_regular"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,7 +87,8 @@
                         android:inputType="textPassword"
                         android:padding="@dimen/ten"
                         android:textColor="#4C92D8"
-                        android:textSize="@dimen/edittextsize" />
+                        android:textSize="@dimen/edittextsize"
+                        android:fontFamily="@font/sans_regular"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -148,7 +152,8 @@
                     android:text="Forgot Your Password"
                     android:textColor="#817F7F"
                     android:textSize="@dimen/textsize"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/sans_regular"/>
 
                 <TextView
                     android:id="@+id/text_ClickHere"
@@ -157,7 +162,8 @@
                     android:layout_toRightOf="@id/login2"
                     android:text=" Click Here"
                     android:textColor="@color/some_color3"
-                    android:textSize="@dimen/textsize" />
+                    android:textSize="@dimen/textsize"
+                    android:fontFamily="@font/sans_bold"/>
 
 
             </RelativeLayout>

@@ -226,6 +226,7 @@ public class HomepageFragment extends Fragment {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         binding.recyclerproduct.setLayoutManager(gridLayoutManager);
         binding.recyclerproduct.setItemAnimator(new DefaultItemAnimator());
+        binding.recyclerproduct.setNestedScrollingEnabled(false);
         binding.recyclerproduct.setAdapter(adpater);
     }
 }

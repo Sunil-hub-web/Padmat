@@ -3,6 +3,7 @@ package com.example.foodhub;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.UiModeManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     LoginPage test;
     SessionManager sessionManager;
+    private UiModeManager uiModeManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        uiModeManager = (UiModeManager) getSystemService(UI_MODE_SERVICE);
+        uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
 
         getSupportActionBar().hide();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
