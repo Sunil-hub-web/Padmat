@@ -217,7 +217,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
                         CartItem cartitem = new CartItem(productid, product_name, productimage, vsubmit_id, attributevalue, vsubmit_price, "1", vsubmit_price);
                         sharedPreference.addFavorite(context, cartitem);
 
-                        Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
 
                         programViewHolder.l_add.setVisibility(View.GONE);
                         programViewHolder.l_add_cart.setVisibility(View.VISIBLE);
@@ -228,7 +228,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
                         CartItem cartitem = new CartItem(productid, product_name, productimage, vsubmit_id, attributevalue, vsubmit_price,"1", vsubmit_price);
                         sharedPreference.addFavorite(context, cartitem);
 
-                        Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
 
                         programViewHolder.l_add.setVisibility(View.GONE);
                         programViewHolder.l_add_cart.setVisibility(View.VISIBLE);
@@ -239,7 +239,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
                         CartItem cartitem = new CartItem(productid, product_name, productimage, vsubmit_id, attributevalue, vsubmit_price, "1", vsubmit_price);
                         sharedPreference.addFavorite(context, cartitem);
 
-                        Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
 
                         programViewHolder.l_add.setVisibility(View.GONE);
                         programViewHolder.l_add_cart.setVisibility(View.VISIBLE);

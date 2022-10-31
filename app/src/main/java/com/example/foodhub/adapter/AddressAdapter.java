@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -29,6 +33,8 @@ import com.example.foodhub.R;
 import com.example.foodhub.extra.ServerLinks;
 import com.example.foodhub.extra.SessionManager;
 import com.example.foodhub.fragment.AddresssDetails;
+import com.example.foodhub.fragment.CartPageFragment;
+import com.example.foodhub.fragment.SubCategoryProduct;
 import com.example.foodhub.model.AddressGetSet;
 
 import org.json.JSONException;
@@ -87,7 +93,13 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
                     session.setBillPostCode(fooditem.get(i).getState_name()+", "+fooditem.get(i).getPincode());
                     session.setBillPhone(fooditem.get(i).getNumber());
 
-                    ((Activity)context).finish();
+                    CartPageFragment cartPageFragment = new CartPageFragment();
+                    FragmentManager manager = ((AppCompatActivity) context).getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = manager.beginTransaction();
+                    fragmentTransaction.replace(R.id.framLayout, cartPageFragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+
 
                 }
             });
@@ -163,6 +175,8 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
 
 
                                 removeItem(AddresssDetails.pos);
+                                notifyDataSetChanged();
+                                fooditem.remove(AddresssDetails.pos);
                                 //AddresssDetails.progressbar.hideDialog();
 
                             } else {

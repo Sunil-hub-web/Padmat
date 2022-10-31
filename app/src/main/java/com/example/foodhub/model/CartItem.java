@@ -87,4 +87,18 @@ public class CartItem {
         this.itemtotal = itemtotal;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "CartItem{" +
+                "product_id='" + product_id + '\'' +
+                ", product_name='" + product_name + '\'' +
+                ", productimage='" + productimage + '\'' +
+                ", varient_id='" + varient_id + '\'' +
+                ", varient_name='" + varient_name + '\'' +
+                ", sales_price='" + sales_price + '\'' +
+                ", quantity='" + quantity + '\'' +
+                ", itemtotal='" + itemtotal + '\'' +
+                '}';
+    }
 }

@@ -53,7 +53,7 @@
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigationview"
-            android:layout_width="@dimen/three_hundred_fifty"
+            android:layout_width="@dimen/three_hundred"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="#FFFFFF"

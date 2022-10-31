@@ -105,6 +105,12 @@ public class AddresssDetails extends Fragment {
 
         GetLocationsState_url();
 
+        String name = session.getUserName();
+        String mobile = session.getUserPhonenumber();
+
+        edit_userName.setText(name);
+        edit_MobileNo.setText(mobile);
+
 
         spinner_State.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -234,10 +240,10 @@ public class AddresssDetails extends Fragment {
                                     String state_id = productt_json.getString("state_id");
                                     String state_name = productt_json.getString("state_name");
 
-
                                     statelist.add(state_name);
                                     stateid.put(state_name, state_id);
                                 }
+
                                 ArrayAdapter<String> dataAdapterVehicle = new ArrayAdapter<String>(getActivity(),
                                         R.layout.spinnerdropdownitem, statelist);
                                 dataAdapterVehicle.setDropDownViewResource(R.layout.spinneritem);
@@ -448,9 +454,9 @@ public class AddresssDetails extends Fragment {
                                                     String pin_id = pn_json.getString("pin_id");
                                                     String pincode = pn_json.getString("pincode");
 
-
                                                     pinlist.add(pincode);
                                                     pinid.put(pincode, pin_id);
+
                                                 }
 
                                             }
@@ -515,6 +521,7 @@ public class AddresssDetails extends Fragment {
     }
 
     public void AddAddress_url() {
+
         Log.d("error_response", session.getUserID());
         progressbar.showDialog();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerLinks.AddAddress_url,
@@ -528,13 +535,16 @@ public class AddresssDetails extends Fragment {
                             String status = jsonObject.getString("success");
                             if (status.equalsIgnoreCase("true")) {
 
-                                getActivity().finish();
+                                //getActivity().finish();
 
                                 progressbar.hideDialog();
+
+                                getAddressData();
 
                             } else {
                                 String msg = jsonObject.getString("message");
 
+                                getAddressData();
 
                                 progressbar.hideDialog();
                                 Toast.makeText(getActivity().getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
@@ -590,6 +600,7 @@ public class AddresssDetails extends Fragment {
     }
 
     public void getAddressData() {
+
         Log.d("error_response", session.getUserID());
         progressbar.showDialog();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerLinks.addresslist_url,

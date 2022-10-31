@@ -6,6 +6,123 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+   <!-- <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="@dimen/four"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:padding="@dimen/eight"
+                app:srcCompat="@drawable/back_icon"
+                tools:ignore="VectorDrawableCompat"
+                app:tint="@color/some_color" />
+
+            <LinearLayout
+                android:id="@+id/home_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_toRightOf="@id/iv_back"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/loc_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/five"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/namee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/three"
+                    android:layout_marginBottom="@dimen/five"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/thirteen"
+                android:layout_toRightOf="@id/iv_back"
+                android:text="Search Product"
+                android:textColor="@color/some_color1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/five"
+                android:clickable="true"
+                android:padding="@dimen/four"
+                android:visibility="gone"
+                app:srcCompat="@drawable/foodapp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <RelativeLayout
+                android:id="@+id/cart_layout"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/eight"
+                    android:src="@drawable/cart_icon"
+                    app:tint="@color/some_color3" />
+
+                <TextView
+                    android:id="@+id/txt_countcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/five"
+                    android:text=""
+                    android:textColor="@color/some_color3"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>-->
+
     <RelativeLayout
         android:id="@+id/searchlay"
         android:layout_width="match_parent"
@@ -35,7 +152,7 @@
         android:id="@+id/searchitemsrecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/searchlay"/>
+        android:layout_below="@+id/searchlay" />
 
     <ImageView
         android:id="@+id/noconnection"

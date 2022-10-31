@@ -190,12 +190,24 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ProgramVie
                 @Override
                 public void onClick(View v) {
 
-                    productid = fooditem.get(i).getProducts_id();
-                    product_name = fooditem.get(i).getName();
-                    vsubmit_id = fooditem.get(i).getVar_id();
-                    attributevalue = fooditem.get(i).getVar_name();
-                    vsubmit_price = fooditem.get(i).getVar_price();
-                    productimage = fooditem.get(i).getImage();
+                    if(fooditem.get(i).getVariations().isEmpty()){
+
+                        productid = fooditem.get(i).getProducts_id();
+                        product_name = fooditem.get(i).getName();
+                        vsubmit_id = fooditem.get(i).getVar_id();
+                        attributevalue = "";
+                        vsubmit_price = fooditem.get(i).getSales_price();
+                        productimage = fooditem.get(i).getImage();
+
+                    }else {
+
+                        productid = fooditem.get(i).getProducts_id();
+                        product_name = fooditem.get(i).getName();
+                        vsubmit_id = fooditem.get(i).getVar_id();
+                        attributevalue = fooditem.get(i).getVar_name();
+                        vsubmit_price = fooditem.get(i).getVar_price();
+                        productimage = fooditem.get(i).getImage();
+                    }
 
                     favouritesBeanSampleList = sharedPreference.loadFavorites(context);
 
@@ -204,18 +216,19 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ProgramVie
                         CartItem cartitem = new CartItem(productid, product_name, productimage, vsubmit_id, attributevalue, vsubmit_price, "1", vsubmit_price);
                         sharedPreference.addFavorite(context, cartitem);
 
-                        Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
 
                         programViewHolder.l_add.setVisibility(View.GONE);
                         programViewHolder.l_add_cart.setVisibility(View.VISIBLE);
                         programViewHolder.tv_count.setText("1");
                         ItemCounter();
+
                     } else if (favouritesBeanSampleList.size() == 0) {
 
                         CartItem cartitem = new CartItem(productid, product_name, productimage, vsubmit_id, attributevalue, vsubmit_price,"1", vsubmit_price);
                         sharedPreference.addFavorite(context, cartitem);
 
-                        Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
 
                         programViewHolder.l_add.setVisibility(View.GONE);
                         programViewHolder.l_add_cart.setVisibility(View.VISIBLE);
@@ -226,7 +239,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ProgramVie
                         CartItem cartitem = new CartItem(productid, product_name, productimage, vsubmit_id, attributevalue, vsubmit_price, "1", vsubmit_price);
                         sharedPreference.addFavorite(context, cartitem);
 
-                        Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Item Added ", Toast.LENGTH_SHORT).show();
 
                         programViewHolder.l_add.setVisibility(View.GONE);
                         programViewHolder.l_add_cart.setVisibility(View.VISIBLE);

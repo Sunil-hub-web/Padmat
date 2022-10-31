@@ -150,13 +150,28 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                 CartPageFragment.sum = CartPageFragment.sum + Double.parseDouble(cartIt.getSales_price()) * Double.parseDouble(cartIt.getQuantity());
 
             }
-            CartPageFragment.itemtotal.setText("₹" + CartPageFragment.sum);
 
-            Log.d("Frfbw_2", String.valueOf(CartPageFragment.sum));
-            double totsm = CartPageFragment.sum + CartPageFragment.delivery_ch - CartPageFragment.coupon_amt;
+            if(CartPageFragment.sum >= 500){
 
-            CartPageFragment.paybleamount.setText("₹" + totsm);
-            Log.d("Frfbw_3", String.valueOf(totsm));
+                CartPageFragment.itemtotal.setText("₹" + CartPageFragment.sum);
+
+                Log.d("Frfbw_2", String.valueOf(CartPageFragment.sum));
+                double totsm = CartPageFragment.sum - CartPageFragment.coupon_amt;
+
+                CartPageFragment.paybleamount.setText("₹" + totsm);
+                Log.d("Frfbw_3", String.valueOf(totsm));
+
+            }else{
+
+                CartPageFragment.itemtotal.setText("₹" + CartPageFragment.sum);
+
+                Log.d("Frfbw_2", String.valueOf(CartPageFragment.sum));
+                double totsm = CartPageFragment.sum + CartPageFragment.delivery_ch - CartPageFragment.coupon_amt;
+
+                CartPageFragment.paybleamount.setText("₹" + totsm);
+                Log.d("Frfbw_3", String.valueOf(totsm));
+            }
+
         }
     }
 

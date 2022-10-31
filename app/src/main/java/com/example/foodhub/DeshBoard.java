@@ -31,6 +31,7 @@ import com.example.foodhub.fragment.ContactFragment;
 import com.example.foodhub.fragment.HomepageFragment;
 import com.example.foodhub.fragment.MyOdrerDetails;
 import com.example.foodhub.fragment.ProfileInformation;
+import com.example.foodhub.fragment.SerachFragment;
 import com.example.foodhub.model.CartItem;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -116,13 +117,13 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
         nav_MobileNo = header.findViewById(R.id.nav_MobileNo);
         nav_ContactUs = header.findViewById(R.id.nav_ContactUs);
         nav_Home = header.findViewById(R.id.nav_Home);
-        nav_Categogry = header.findViewById(R.id.nav_Categogry);
+        //nav_Categogry = header.findViewById(R.id.nav_Categogry);
 
         String name = sessionManager.getUserName();
-        String mobile = sessionManager.getUserEmail();
+        String mobile = sessionManager.getUserPhonenumber();
 
         nav_Name.setText(name);
-        nav_MobileNo.setText(mobile);
+        nav_MobileNo.setText("+91 "+ mobile);
 
         sharedPreference = new SharedPreference();
 
@@ -181,6 +182,8 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
 
                     binding.MyDrawer.closeDrawer(GravityCompat.START);
                     text_name.setVisibility(View.VISIBLE);
+                    text_name.setTextSize(15);
+                    text_name.setText("Home");
 
                 }else{
 
@@ -195,7 +198,7 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
                     ft.replace(R.id.framLayout, homepage,"HomeFragment");
                     ft.commit();
                     text_name.setTextSize(15);
-                    text_name.setText(addressDetails);
+                    text_name.setText("Home");
 
                 }
 
@@ -260,8 +263,12 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(DeshBoard.this,SearchActivity.class);
-                startActivity(intent);
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                SerachFragment serachFragment = new SerachFragment();
+                ft.replace(R.id.framLayout, serachFragment);
+                ft.commit();
+                text_name.setTextSize(18);
+                text_name.setText("Search Product");
             }
         });
 

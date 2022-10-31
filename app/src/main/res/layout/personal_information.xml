@@ -79,6 +79,9 @@
                         android:textSize="@dimen/edittextsize"
                         android:textColor="#4C92D8"
                         android:inputType="phone"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:textIsSelectable="false"
                         android:fontFamily="@font/sans_regular"/>
 
                 </com.google.android.material.textfield.TextInputLayout>

@@ -13,16 +13,17 @@
         <de.hdodenhof.circleimageview.CircleImageView
 
             android:id="@+id/nav_profile_image"
-            android:layout_width="@dimen/hundred"
-            android:layout_height="@dimen/hundred"
+            android:layout_width="@dimen/sixty"
+            android:layout_height="@dimen/sixty"
             android:layout_marginStart="@dimen/ten"
             android:layout_marginTop="@dimen/ten"
             android:layout_marginEnd="@dimen/ten"
+            android:layout_centerVertical="true"
             android:layout_marginBottom="@dimen/ten"
-            android:src="@drawable/foodapp" />
+            android:src="@drawable/foodapp"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/nav_profile_image"
             android:layout_centerVertical="true"
@@ -33,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sunil Kumar Dash"
-                android:textSize="@dimen/twenty_five"
+                android:textSize="@dimen/edittextsize"
                 android:textColor="@color/some_color"
                 android:fontFamily="@font/sans_bold">
 
@@ -44,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="+91-9178 888 455"
-                android:textSize="@dimen/edittextsize"
+                android:textSize="@dimen/textsize"
                 android:fontFamily="@font/sans_regular"
                 android:textColor="@color/some_color3">
 
@@ -99,7 +100,7 @@
             android:layout_marginTop="@dimen/ten"
             android:background="@color/some_color31" />
 
-        <RelativeLayout
+       <!-- <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/ten">
@@ -120,21 +121,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/ten"
                 android:layout_toRightOf="@+id/image_category"
+                android:fontFamily="@font/sans_regular"
                 android:text="Category"
                 android:textColor="@color/some_color"
-                android:textSize="@dimen/edittextsize"
-                android:fontFamily="@font/sans_regular">
+                android:textSize="@dimen/edittextsize">
 
             </TextView>
 
-        </RelativeLayout>
+        </RelativeLayout>-->
 
-        <View
+       <!-- <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_below="@+id/text1"
             android:layout_marginTop="@dimen/ten"
-            android:background="@color/some_color31" />
+            android:background="@color/some_color31" />-->
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -25,6 +25,7 @@
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_login_page.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_order_success_fully.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_register_page.xml" value="0.21979166666666666" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_search.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_show_your_order_details.xml" value="0.22083333333333333" />
@@ -37,7 +38,7 @@
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/category_item_layout.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/categorypage.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/checkoutpage.xml" value="0.22" />
-        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/combolist_layout.xml" value="0.18" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/combolist_layout.xml" value="0.33" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/condition_logout.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/contactsupport.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/designview.xml" value="0.25" />

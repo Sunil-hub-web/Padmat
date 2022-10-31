@@ -1,15 +1,19 @@
-package com.example.foodhub;
+package com.example.foodhub.fragment;
 
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +27,8 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.foodhub.R;
+import com.example.foodhub.SearchActivity;
 import com.example.foodhub.adapter.SearchAdapter;
 import com.example.foodhub.extra.ServerLinks;
 import com.example.foodhub.extra.SessionManager;
@@ -37,7 +43,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SearchActivity extends AppCompatActivity {
+public class SerachFragment extends Fragment {
 
     SessionManager session;
     EditText searchtxt;
@@ -49,22 +55,23 @@ public class SearchActivity extends AppCompatActivity {
     String keyword;
     ImageView noproductfound, noconnection;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
 
-        getSupportActionBar().hide();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        session = new SessionManager(this);
+        View view = inflater.inflate(R.layout.activity_search,container,false);
 
 
-        searchitemsrecycler = findViewById(R.id.searchitemsrecycler);
-        searchtxt = findViewById(R.id.searchtxt);
-        noproductfound = findViewById(R.id.noproductfound);
-        noconnection = findViewById(R.id.noconnection);
+
+        session = new SessionManager(getActivity());
+
+
+        searchitemsrecycler = view.findViewById(R.id.searchitemsrecycler);
+        searchtxt = view.findViewById(R.id.searchtxt);
+        noproductfound = view.findViewById(R.id.noproductfound);
+        noconnection = view.findViewById(R.id.noconnection);
 
         searchtxt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -90,6 +97,8 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
+
+        return view;
     }
 
     public void searchItemData() {
@@ -166,7 +175,7 @@ public class SearchActivity extends AppCompatActivity {
                                 String msg = jsonObject.getString("message");
 
 
-                                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity().getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
 
@@ -186,10 +195,10 @@ public class SearchActivity extends AppCompatActivity {
                             noconnection.setVisibility(View.VISIBLE);
                             searchitemsrecycler.setVisibility(View.GONE);
                             noproductfound.setVisibility(View.GONE);
-                            Toast.makeText(getApplicationContext(), "Please check Internet Connection", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity().getApplicationContext(), "Please check Internet Connection", Toast.LENGTH_SHORT).show();
                             // ...
                         } else {
-                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity().getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                         }
                         ;
                     }
@@ -205,15 +214,15 @@ public class SearchActivity extends AppCompatActivity {
 
         stringRequest.setRetryPolicy(new
                 DefaultRetryPolicy(30000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         requestQueue.getCache().clear();
         requestQueue.add(stringRequest);
     }
 
     public void setData() {
 
-        SearchAdapter adpater = new SearchAdapter(itemArraylist, SearchActivity.this);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
+        SearchAdapter adpater = new SearchAdapter(itemArraylist, getActivity());
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
         searchitemsrecycler.setLayoutManager(gridLayoutManager);
         searchitemsrecycler.setItemAnimator(new DefaultItemAnimator());
         searchitemsrecycler.setAdapter(adpater);

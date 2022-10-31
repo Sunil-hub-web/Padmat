@@ -52,6 +52,20 @@ public class ProfileInformation extends Fragment {
 
         getProfileData();
 
+        binding.textEditOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                binding.editFillname.setEnabled(true);
+                binding.editFillname.setFocusable(true);
+                binding.editMobileNo.setEnabled(false);
+                binding.editEmailId.setEnabled(true);
+
+
+
+            }
+        });
+
         return view;
     }
 
@@ -78,6 +92,9 @@ public class ProfileInformation extends Fragment {
                                 binding.editMobileNo.setText(number);
                                 binding.editEmailId.setText(email);
 
+                                binding.editFillname.setEnabled(false);
+                                binding.editMobileNo.setEnabled(false);
+                                binding.editEmailId.setEnabled(false);
 
                                 progressbar.hideDialog();
 

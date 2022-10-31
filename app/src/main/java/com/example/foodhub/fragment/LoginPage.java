@@ -97,12 +97,13 @@ public class LoginPage extends Fragment {
                         String id = jsonObject.getString("id");
                         String name = jsonObject.getString("name");
                         String email = jsonObject.getString("email");
+                        String contact = jsonObject.getString("contact");
                         String img = jsonObject.getString("img");
 
                         session.setUserID(id);
                         session.setUserName(name);
                         session.setUserEmail(email);
-                        session.setPhoto(img);
+                        session.setUserPhonenumber(contact);
                         session.setLogin();
 
                         progressbar.hideDialog();

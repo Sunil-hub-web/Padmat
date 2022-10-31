@@ -2,6 +2,7 @@ package com.example.foodhub.fragment;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -40,6 +41,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.foodhub.DeshBoard;
+import com.example.foodhub.OrderSuccessFully;
 import com.example.foodhub.R;
 import com.example.foodhub.adapter.CartAdapter;
 import com.example.foodhub.databinding.CartpageBinding;
@@ -127,6 +129,8 @@ public class CartPageFragment extends Fragment {
 
         favouritesBeanSampleList = sharedPreference.loadFavorites(getActivity());
 
+       // Log.d("hgjbsz",favouritesBeanSampleList.toString());
+
 /*        int cartcount = favouritesBeanSampleList.size();
 
         String count = String.valueOf(cartcount);
@@ -143,6 +147,7 @@ public class CartPageFragment extends Fragment {
                 binding.recycleRestCats.setAdapter(productListAdapter);
                 noitem_layout.setVisibility(View.GONE);
                 cartlayout.setVisibility(View.VISIBLE);
+
             } else {
                 noitem_layout.setVisibility(View.VISIBLE);
                 cartlayout.setVisibility(View.GONE);
@@ -171,12 +176,15 @@ public class CartPageFragment extends Fragment {
         });
 
         if (session.getBillFirstANme().equalsIgnoreCase("First Name")) {
+
             name_txt.setVisibility(View.GONE);
             address_txt.setVisibility(View.GONE);
             pincode_txt.setVisibility(View.GONE);
             phoneno_txt.setVisibility(View.GONE);
             tv_change.setText("Select");
+
         } else {
+
             name_txt.setText(session.getBillFirstANme());
             address_txt.setText(session.getBillAddres2());
             pincode_txt.setText(session.getBillPostCode());
@@ -258,20 +266,17 @@ public class CartPageFragment extends Fragment {
 
                 if (!session.getUserID().equalsIgnoreCase("0")) {
 
+                    if(binding.tvChange.getText().toString().trim().equals("")){
 
-                    if (session.getBillFirstANme().equalsIgnoreCase("First Name")) {
-                        Toast.makeText(getActivity(), "Selct Address", Toast.LENGTH_SHORT).show();
-                    } else if (datetimeslot_layout.getVisibility() == View.GONE) {
-                        datetimeslot_layout.setVisibility(View.VISIBLE);
-                        cartlayout.setVisibility(View.GONE);
-                    }else if (dateselected.equalsIgnoreCase("")) {
-                        Toast.makeText(getActivity(), "Select Delivary Date", Toast.LENGTH_SHORT).show();
-                    }else if (slotname.trim().length()==0 || slotname.equalsIgnoreCase("Select time slot")) {
-                        Toast.makeText(getActivity(), "Select Time Slot", Toast.LENGTH_SHORT).show();
-                    } else {
+                        Toast.makeText(getActivity(), "Please select your Address", Toast.LENGTH_SHORT).show();
+
+                    }else{
+
                         CreateProductArray();
                     }
+
                 } else {
+
                     Toast.makeText(getActivity(), "Login to place order", Toast.LENGTH_SHORT).show();
                     session.logoutUser();
                 }
@@ -452,20 +457,30 @@ public class CartPageFragment extends Fragment {
 
                     CartItem cartIt = favouritesBeanSampleList.get(j);
 
-
                     sum = sum + Double.parseDouble(cartIt.getSales_price()) * Double.parseDouble(cartIt.getQuantity());
-
-
                 }
 
                 itemtotal.setText("₹" + sum);
 
-                Log.d("Frfbw_2", String.valueOf(sum));
-                Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
-                double totsm = sum + delivery_ch - coupon_amt;
+                if(sum >= 500){
 
-                paybleamount.setText("₹" + totsm);
-                Log.d("Frfbw_3", String.valueOf(totsm));
+                    Log.d("Frfbw_2", String.valueOf(sum));
+                    Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
+                    double totsm = sum - coupon_amt;
+
+                    paybleamount.setText("₹" + totsm);
+                    Log.d("Frfbw_3", String.valueOf(totsm));
+
+                }else{
+
+                    Log.d("Frfbw_2", String.valueOf(sum));
+                    Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
+                    double totsm = sum + delivery_ch - coupon_amt;
+
+                    paybleamount.setText("₹" + totsm);
+                    Log.d("Frfbw_3", String.valueOf(totsm));
+                }
+
             }
         }
     }
@@ -649,14 +664,17 @@ public class CartPageFragment extends Fragment {
                                 sharedPreference.clearDate(getActivity());
                                 Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
 
-                                MyOdrerDetails checkOutFragment = new MyOdrerDetails();
+                               /* MyOdrerDetails checkOutFragment = new MyOdrerDetails();
                                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                                 fragmentTransaction.replace(R.id.framLayout, checkOutFragment);
                                 fragmentTransaction.addToBackStack(null);
                                 fragmentTransaction.commit();
                                 DeshBoard.text_name.setTextSize(18);
-                                DeshBoard.text_name.setText("MyOrder Deatils");
+                                DeshBoard.text_name.setText("MyOrder Deatils");*/
+
+                                Intent intent = new Intent(getActivity(), OrderSuccessFully.class);
+                                startActivity(intent);
 
                             } else {
 

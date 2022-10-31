@@ -89,6 +89,9 @@ public class HomepageFragment extends Fragment {
 
         getHomeDetails();
 
+        //sharedPreference = new SharedPreference();
+
+        //sharedPreference.clearDate(getActivity());
 
         return view;
     }

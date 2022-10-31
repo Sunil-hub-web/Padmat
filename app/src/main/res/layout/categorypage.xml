@@ -8,7 +8,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView1"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/hundred"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/five">
 
             <RelativeLayout
@@ -20,10 +20,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/sixty"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginStart="@dimen/five"
-                    android:layout_marginTop="@dimen/five"
-                    android:layout_marginEnd="@dimen/five"
-                    android:layout_marginBottom="@dimen/five"
                     android:scaleType="fitXY"
                     android:src="@drawable/paneer_masala">
 
@@ -35,10 +31,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/image_category"
                     android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/five"
+                    android:fontFamily="@font/sans_bold"
                     android:text="Paneer"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/fifteen"
-                    android:fontFamily="@font/sans_bold">
+                    android:textSize="@dimen/thirteen">
 
                 </TextView>
 

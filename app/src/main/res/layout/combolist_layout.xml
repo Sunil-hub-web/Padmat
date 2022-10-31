@@ -68,8 +68,8 @@
                         android:singleLine="true"
                         android:text="Rs. 1520.00"
                         android:textColor="@color/some_color5"
-                        android:textSize="@dimen/twelve"
-                        android:fontFamily="@font/roboto_thin"/>
+                        android:textSize="@dimen/fourteen"
+                        android:fontFamily="@font/sans_bold"/>
 
                     <TextView
                         android:id="@+id/discount"
@@ -80,8 +80,8 @@
                         android:paddingLeft="@dimen/eight"
                         android:text="4.0*"
                         android:textColor="@color/some_color3"
-                        android:textSize="@dimen/eleven"
-                        android:fontFamily="@font/raleway"/>
+                        android:textSize="@dimen/thirteen"
+                        android:fontFamily="@font/sans_bold"/>
 
                 </LinearLayout>
 
