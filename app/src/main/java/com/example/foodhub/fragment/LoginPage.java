@@ -23,6 +23,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.foodhub.DeshBoard;
+import com.example.foodhub.ForgotPassword;
 import com.example.foodhub.R;
 import com.example.foodhub.databinding.ActivityLoginPageBinding;
 import com.example.foodhub.extra.ServerLinks;
@@ -72,6 +73,15 @@ public class LoginPage extends Fragment {
                     loginUser(username,password);
 
                 }
+            }
+        });
+
+        binding.textClickHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), ForgotPassword.class);
+                startActivity(intent);
             }
         });
 

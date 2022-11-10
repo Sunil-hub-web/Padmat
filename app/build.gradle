@@ -63,5 +63,7 @@ dependencies {
 
     implementation 'io.sentry:sentry-android:6.6.0'
 
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+
 
 }

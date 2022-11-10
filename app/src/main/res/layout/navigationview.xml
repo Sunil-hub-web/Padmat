@@ -15,12 +15,12 @@
             android:id="@+id/nav_profile_image"
             android:layout_width="@dimen/sixty"
             android:layout_height="@dimen/sixty"
+            android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/ten"
             android:layout_marginTop="@dimen/ten"
             android:layout_marginEnd="@dimen/ten"
-            android:layout_centerVertical="true"
             android:layout_marginBottom="@dimen/ten"
-            android:src="@drawable/foodapp"/>
+            android:src="@drawable/foodapp" />
 
         <LinearLayout
             android:layout_width="wrap_content"

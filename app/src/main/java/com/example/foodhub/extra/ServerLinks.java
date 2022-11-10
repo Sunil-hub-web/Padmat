@@ -21,6 +21,10 @@ public class ServerLinks {
     public static String AddAddress_url =  main_url+"method=AddAddress";
     public static String SearchProduct_url =  main_url+"method=searchProduct";
     public static String Verson_url =  main_url+"method=getVersion";
+    public static String forgetpasswordotp =  main_url+"method=forgetpasswordotp";
+    public static String change_password =  main_url+"method=change_password";
+    public static String otpveryfy =  main_url+"method=otpveryfy";
+    public static String registerotp =  main_url+"method=registerotp";
 
 
 }

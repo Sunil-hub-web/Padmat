@@ -1,5 +1,6 @@
 package com.example.foodhub.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.TextUtils;
@@ -26,6 +27,7 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.foodhub.OTPVerifactionPage;
 import com.example.foodhub.R;
 import com.example.foodhub.databinding.ActivityRegisterPageBinding;
 import com.example.foodhub.extra.ServerLinks;
@@ -103,7 +105,7 @@ public class RegisterPage extends Fragment {
                     str_Password = binding.editPassword.getText().toString().trim();
 
 
-                    registerUser(str_UserFullName, str_MobileNumber, str_EmailId, str_MobileNumber, str_Password);
+                    registerUser(str_UserFullName,str_MobileNumber,str_EmailId,str_MobileNumber,str_Password);
 
                     //Toast.makeText(getContext(), "success", Toast.LENGTH_SHORT).show();
                 }
@@ -118,7 +120,7 @@ public class RegisterPage extends Fragment {
 
         progressbar.showDialog();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerLinks.signup_url, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerLinks.registerotp, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -132,15 +134,29 @@ public class RegisterPage extends Fragment {
                     if (success.equalsIgnoreCase("true")) {
 
                         String msg = jsonObject.getString("msg");
-                        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(getActivity(), "Login to continue", Toast.LENGTH_SHORT).show();
 
-                        LoginPage loginPage = new LoginPage();
-                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fram, loginPage,"loginpage");
-                        fragmentTransaction.addToBackStack(null);
-                        fragmentTransaction.commit();
+                        if(msg.equals("mobile no Already Register")){
+
+                            Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+
+                        }else{
+
+                            String msg1 = jsonObject.getString("msg");
+                            Toast.makeText(getActivity(), msg1, Toast.LENGTH_SHORT).show();
+
+                            String OTP = jsonObject.getString("OTP");
+                            String mobile = jsonObject.getString("mobile");
+
+                            Intent intent  = new Intent(getActivity(), OTPVerifactionPage.class);
+                            intent.putExtra("OTP",OTP);
+                            intent.putExtra("str_MobileNumber",mobile);
+                            intent.putExtra("str_UserFullName",fullname);
+                            intent.putExtra("str_EmailId",mail);
+                            intent.putExtra("str_MobileNumber",username);
+                            intent.putExtra("str_Password",password);
+                            intent.putExtra("classname","classname");
+                            startActivity(intent);
+                        }
 
                     } else {
 
@@ -174,11 +190,7 @@ public class RegisterPage extends Fragment {
 
                 Map<String, String> params = new HashMap<>();
 
-                params.put("fullname", fullname);
-                params.put("contact", contact);
-                params.put("mail", mail);
-                params.put("username", username);
-                params.put("password", password);
+                params.put("mobile", contact);
 
                 Log.d("paramsforhomeapi", "" + params);
 

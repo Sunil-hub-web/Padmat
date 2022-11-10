@@ -160,10 +160,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/login2"
+                    android:fontFamily="@font/sans_bold"
                     android:text=" Click Here"
                     android:textColor="@color/some_color3"
-                    android:textSize="@dimen/textsize"
-                    android:fontFamily="@font/sans_bold"/>
+                    android:textSize="@dimen/textsize" />
 
 
             </RelativeLayout>

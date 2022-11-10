@@ -13,21 +13,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp"
         tools:targetApi="31">
-
         <activity
-            android:name=".OrderSuccessFully"
-            android:exported="false">
-
-        </activity>
-        <activity
-            android:name=".SearchActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name="com.example.foodhub.ForgotPassword"
+            android:name=".ChangePassword"
             android:exported="true">
         </activity>
         <activity
-            android:name="com.example.foodhub.SplashScreen"
+            android:name=".OTPVerifactionPage"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".OrderSuccessFully"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,16 +40,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.foodhub.DeshBoard"
+            android:name=".DeshBoard"
             android:exported="true" />
         <activity
-            android:name="com.example.foodhub.MainActivity"
-            android:exported="true"></activity>
+            android:name=".MainActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="io.sentry.dsn"
             android:value="https://examplePublicKey@o0.ingest.sentry.io/0" />
-
     </application>
 
 </manifest>

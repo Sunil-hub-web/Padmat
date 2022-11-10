@@ -66,35 +66,24 @@ public class ForgotPassword extends AppCompatActivity {
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ed_email.getText().toString().isEmpty() || !isEmailValid(ed_email.getText().toString())) {
-                    ed_email.setError("Enter Valid Email");
+                if (ed_email.getText().toString().isEmpty()) {
+                    ed_email.setError("Enter Valid Mobile No");
+
+                } else if (ed_email.getText().toString().length() != 10) {
+                    ed_email.setError("Enter 10 Digit Mobile No");
 
                 }else{
 
                     um = ed_email.getText().toString();
-                    SendPWd();
+                    SendPWd(um);
                 }
             }
         });
     }
 
-    public static boolean isEmailValid(String email) {
-        boolean isValid = false;
-
-        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-        CharSequence inputStr = email;
-
-        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(inputStr);
-        if (matcher.matches()) {
-            isValid = true;
-        }
-        return isValid;
-    }
-
-    public void SendPWd() {
+    public void SendPWd(String um) {
         progressbar.showDialog();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerLinks.Forgetpassword_url,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerLinks.forgetpasswordotp,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -102,17 +91,20 @@ public class ForgotPassword extends AppCompatActivity {
 
                         try {
                             JSONObject jsonObject = new JSONObject(response);
+
                             String status = jsonObject.getString("success");
                             if (status.equalsIgnoreCase("true")) {
-
 
                                 String msg = jsonObject.getString("msg");
 
                                 progressbar.hideDialog();
                                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                                Intent i = new Intent(getApplicationContext(), OTPVerifactionPage.class);
+                                i.putExtra("mobileno",um);
+                                i.putExtra("classname","ForgotPassword");
                                 startActivity(i);
                                 finish();
+
                             } else {
                                 String msg = jsonObject.getString("msg");
 
@@ -149,7 +141,7 @@ public class ForgotPassword extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("emails", um);
+                params.put("mobile", um);
 
                 Log.d("paramsforhomeapi", "" + params);
                 return params;

@@ -6,6 +6,8 @@ pluginManagement {
         //here
         jcenter()
 
+        maven { url 'https://jitpack.io' }
+
     }
 }
 dependencyResolutionManagement {
@@ -15,6 +17,8 @@ dependencyResolutionManagement {
         mavenCentral()
         //here
         jcenter()
+
+        maven { url 'https://jitpack.io' }
 
     }
 }

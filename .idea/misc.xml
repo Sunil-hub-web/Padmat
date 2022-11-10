@@ -12,6 +12,7 @@
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/btn_cart.xml" value="0.1655" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/btn_minus__count.xml" value="0.1655" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/btn_plus_count.xml" value="0.1655" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/button_back1.xml" value="0.1255" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/cardback.xml" value="0.1165" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/homecard_back.xml" value="0.1165" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/ic_arrow_drop_down_black_24dp.xml" value="0.1655" />
@@ -21,11 +22,13 @@
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/selector.xml" value="0.111" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/shocart.xml" value="0.1265" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/drawable/textback.xml" value="0.1165" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_change_password.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_desh_board.xml" value="0.20677083333333332" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_login_page.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_order_success_fully.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_otpverifaction_page.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_register_page.xml" value="0.21979166666666666" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_search.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/FoodApp/app/src/main/res/layout/activity_show_your_order_details.xml" value="0.22083333333333333" />
