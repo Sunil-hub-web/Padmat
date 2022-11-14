@@ -17,7 +17,8 @@
     android:drawableTint="@color/white"
     android:textColor="@color/some_color3"
     android:textSize="12sp"
-    android:fontFamily="@font/sans_regular"/>
+    android:fontFamily="@font/sans_regular"
+    android:layout_margin="@dimen/ten"/>
 
     <!--<ImageView-->
     <!--android:layout_width="50dp"-->

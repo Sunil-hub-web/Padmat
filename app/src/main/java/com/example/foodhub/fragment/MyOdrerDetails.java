@@ -69,6 +69,8 @@ public class MyOdrerDetails extends Fragment {
         progressbar = new ViewDialog(getActivity());
         session = new SessionManager(getActivity());
 
+        initiateView();
+
         orderhist.addOnItemTouchListener(new RecyclerTouchListener(getActivity().getApplicationContext(), orderhist, new RecyclerTouchListener.ClickListener() {
 
             @Override
