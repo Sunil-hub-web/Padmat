@@ -344,40 +344,35 @@ public class CartPageFragment extends Fragment {
 
             try {
 
-                Date time1 = new SimpleDateFormat("HH:mm:ss").parse("07:00:00");
+                Date time1 = new SimpleDateFormat("HH:mm:ss").parse("05:00:00");
                 Calendar calendar1 = Calendar.getInstance();
                 calendar1.setTime(time1);
                 calendar1.add(Calendar.DATE, 1);
 
-                Date time2 = new SimpleDateFormat("HH:mm:ss").parse("09:00:00");
+                Date time2 = new SimpleDateFormat("HH:mm:ss").parse("06:00:00");
                 Calendar calendar2 = Calendar.getInstance();
                 calendar2.setTime(time2);
                 calendar2.add(Calendar.DATE, 1);
 
-                Date time3 = new SimpleDateFormat("HH:mm:ss").parse("11:00:00");
+                Date time3 = new SimpleDateFormat("HH:mm:ss").parse("7:00:00");
                 Calendar calendar3 = Calendar.getInstance();
                 calendar3.setTime(time3);
                 calendar3.add(Calendar.DATE, 1);
 
-                Date time4 = new SimpleDateFormat("HH:mm:ss").parse("13:00:00");
+                Date time4 = new SimpleDateFormat("HH:mm:ss").parse("8:00:00");
                 Calendar calendar4 = Calendar.getInstance();
                 calendar4.setTime(time4);
                 calendar4.add(Calendar.DATE, 1);
 
-                Date time5 = new SimpleDateFormat("HH:mm:ss").parse("15:00:00");
+                Date time5 = new SimpleDateFormat("HH:mm:ss").parse("9:00:00");
                 Calendar calendar5 = Calendar.getInstance();
                 calendar5.setTime(time5);
                 calendar5.add(Calendar.DATE, 1);
 
-                Date time6 = new SimpleDateFormat("HH:mm:ss").parse("17:00:00");
+                Date time6 = new SimpleDateFormat("HH:mm:ss").parse("10:00:00");
                 Calendar calendar6 = Calendar.getInstance();
                 calendar6.setTime(time6);
                 calendar6.add(Calendar.DATE, 1);
-
-                Date time7 = new SimpleDateFormat("HH:mm:ss").parse("18:00:00");
-                Calendar calendar7 = Calendar.getInstance();
-                calendar7.setTime(time7);
-                calendar7.add(Calendar.DATE, 1);
 
                 Date x = Calendar.getInstance().getTime();
 //                final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
@@ -389,7 +384,6 @@ public class CartPageFragment extends Fragment {
                 Log.d("mkfgud_4", "" + calendar4.getTime());
                 Log.d("mkfgud_5", "" + calendar5.getTime());
                 Log.d("mkfgud_6", "" + calendar6.getTime());
-                Log.d("mkfgud_7", "" + calendar7.getTime());
                 Log.d("mkfgud_8", "" + x);
 
                 if (x.before(calendar1.getTime())) {
@@ -408,20 +402,10 @@ public class CartPageFragment extends Fragment {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray4, R.layout.spinnerfront2);
 
-                } else if (x.before(calendar5.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray5, R.layout.spinnerfront2);
-
-                } else if (x.before(calendar6.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray6, R.layout.spinnerfront2);
-
-                } else if (x.after(calendar7.getTime())) {
+                } else if (x.after(calendar5.getTime())) {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray7, R.layout.spinnerfront2);
-
                 }
-
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
                 timeslot.setAdapter(adapter);
             } catch (ParseException e) {
