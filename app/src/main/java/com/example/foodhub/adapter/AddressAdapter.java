@@ -104,6 +104,30 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
                 }
             });
 
+            programViewHolder.edit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    session = new SessionManager(context);
+
+
+                    session.setBillFirstANme(fooditem.get(i).getName());
+                    session.setBillAddress1(fooditem.get(i).getAddres_id());
+                    session.setBillAddres2(fooditem.get(i).getAddress()+", "+fooditem.get(i).getCity_name());
+                    session.setBillPostCode(fooditem.get(i).getState_name()+", "+fooditem.get(i).getPincode());
+                    session.setBillPhone(fooditem.get(i).getNumber());
+
+                    CartPageFragment cartPageFragment = new CartPageFragment();
+                    FragmentManager manager = ((AppCompatActivity) context).getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = manager.beginTransaction();
+                    fragmentTransaction.replace(R.id.framLayout, cartPageFragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+
+                }
+            });
+
+
             programViewHolder.delete_address.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

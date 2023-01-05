@@ -82,8 +82,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ProgramVie
                     dialogMenu.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialogMenu.setContentView(R.layout.variationrecycler_layout);
                     dialogMenu.setCancelable(true);
-                    dialogMenu.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
                     dialogMenu.setCanceledOnTouchOutside(true);
+                    dialogMenu.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
 
                     RecyclerView rv_vars = dialogMenu.findViewById(R.id.rv_vars);
 

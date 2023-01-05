@@ -637,6 +637,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -644,7 +645,8 @@
                             android:text="Select Delivery Date &amp; Time"
                             android:textColor="@color/black"
                             android:textSize="@dimen/sixteen"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            />
 
                     </RelativeLayout>
 
@@ -685,7 +687,8 @@
                             android:text="Select Date"
                             android:textColor="@color/black"
                             android:textSize="@dimen/fourteen"
-                            android:textStyle="normal" />
+                            android:textStyle="normal"
+                            android:drawableRight="@drawable/calendar"/>
 
 
                     </RelativeLayout>

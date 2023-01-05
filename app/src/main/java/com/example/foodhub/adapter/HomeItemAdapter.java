@@ -82,13 +82,15 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
                         dialogMenu.requestWindowFeature(Window.FEATURE_NO_TITLE);
                         dialogMenu.setContentView(R.layout.variationrecycler_layout);
                         dialogMenu.setCancelable(true);
-                        dialogMenu.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
                         dialogMenu.setCanceledOnTouchOutside(true);
+                        dialogMenu.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
 
                         RecyclerView rv_vars = dialogMenu.findViewById(R.id.rv_vars);
 
                         rv_vars.setLayoutManager(new LinearLayoutManager(context));
                         rv_vars.setNestedScrollingEnabled(false);
+
                         VariationAdapterforProductlist varad = new VariationAdapterforProductlist(variations, context);
                         rv_vars.setAdapter(varad);
 

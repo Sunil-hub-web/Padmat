@@ -105,9 +105,9 @@
                     android:background="@drawable/box"
                     android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                     android:drawableTint="@color/some_color"
+                    android:fontFamily="@font/sans_regular"
                     android:gravity="center"
-                    android:textSize="@dimen/thirteen"
-                    android:fontFamily="@font/sans_regular">
+                    android:textSize="@dimen/thirteen">
 
                 </TextView>
 

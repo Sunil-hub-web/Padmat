@@ -416,9 +416,33 @@ public class CartPageFragment extends Fragment {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray6, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar7.getTime())) {
+                } /*else if (x.after(calendar7.getTime())) {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray7, R.layout.spinnerfront2);
+                            R.array.timearray1, R.layout.spinnerfront2);
+
+                }*/ else if (x.after(calendar1.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                            R.array.timearray1, R.layout.spinnerfront2);
+
+                } else if (x.after(calendar2.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                            R.array.timearray2, R.layout.spinnerfront2);
+
+                } else if (x.after(calendar3.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                            R.array.timearray3, R.layout.spinnerfront2);
+
+                } else if (x.after(calendar4.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                            R.array.timearray4, R.layout.spinnerfront2);
+
+                } else if (x.after(calendar5.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                            R.array.timearray5, R.layout.spinnerfront2);
+
+                } else if (x.after(calendar6.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                            R.array.timearray6, R.layout.spinnerfront2);
 
                 }
 
