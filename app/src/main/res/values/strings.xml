@@ -7,42 +7,25 @@
 
     <string-array name="timearray1">
         <item>Select time slot</item>
-        <item>7AM-9AM</item>
-        <item>9AM-11AM</item>
-        <item>11AM-1PM</item>
-        <item>1PM-3PM</item>
-        <item>3PM-5PM</item>
         <item>5PM-6PM</item>
+        <item>6PM-7PM</item>
+        <item>7PM-8PM</item>
+        <item>8PM-9PM</item>
     </string-array>
     <string-array name="timearray2">
         <item>Select time slot</item>
-        <item>9AM-11AM</item>
-        <item>11AM-1PM</item>
-        <item>1PM-3PM</item>
-        <item>3PM-5PM</item>
-        <item>5PM-6PM</item>
+        <item>6PM-7PM</item>
+        <item>7PM-8PM</item>
+        <item>8PM-9PM</item>
     </string-array>
     <string-array name="timearray3">
         <item>Select time slot</item>
-        <item>11AM-1PM</item>
-        <item>1PM-3PM</item>
-        <item>3PM-5PM</item>
-        <item>5PM-6PM</item>
+        <item>7PM-8PM</item>
+        <item>8PM-9PM</item>
     </string-array>
     <string-array name="timearray4">
         <item>Select time slot</item>
-        <item>1PM-3PM</item>
-        <item>3PM-5PM</item>
-        <item>5PM-6PM</item>
-    </string-array>
-    <string-array name="timearray5">
-        <item>Select time slot</item>
-        <item>3PM-5PM</item>
-        <item>5PM-6PM</item>
-    </string-array>
-    <string-array name="timearray6">
-        <item>Select time slot</item>
-        <item>5PM-6PM</item>
+        <item>8PM-9PM</item>
     </string-array>
     <string-array name="timearray7">
         <item>No slots available</item>
