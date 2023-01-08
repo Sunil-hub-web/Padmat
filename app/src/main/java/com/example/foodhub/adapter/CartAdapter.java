@@ -151,13 +151,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
             }
 
-            if(CartPageFragment.sum >= 500){
+            if(CartPageFragment.sum >= 250){
 
                 CartPageFragment.itemtotal.setText("₹" + CartPageFragment.sum);
 
                 Log.d("Frfbw_2", String.valueOf(CartPageFragment.sum));
                 double totsm = CartPageFragment.sum - CartPageFragment.coupon_amt;
-
+                CartPageFragment.tv_ship_price.setText("0");
                 CartPageFragment.paybleamount.setText("₹" + totsm);
                 Log.d("Frfbw_3", String.valueOf(totsm));
 
@@ -166,6 +166,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                 CartPageFragment.itemtotal.setText("₹" + CartPageFragment.sum);
 
                 Log.d("Frfbw_2", String.valueOf(CartPageFragment.sum));
+                String str_delivery_ch = String.valueOf(CartPageFragment.delivery_ch);
+                CartPageFragment.tv_ship_price.setText(str_delivery_ch);
                 double totsm = CartPageFragment.sum + CartPageFragment.delivery_ch - CartPageFragment.coupon_amt;
 
                 CartPageFragment.paybleamount.setText("₹" + totsm);

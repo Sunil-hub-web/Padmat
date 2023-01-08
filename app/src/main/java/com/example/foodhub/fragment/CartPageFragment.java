@@ -408,7 +408,7 @@ public class CartPageFragment extends Fragment {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray4, R.layout.spinnerfront2);
 
-                } else if (x.before(calendar5.getTime())) {
+                } /*else if (x.before(calendar5.getTime())) {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray5, R.layout.spinnerfront2);
 
@@ -416,7 +416,7 @@ public class CartPageFragment extends Fragment {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray6, R.layout.spinnerfront2);
 
-                } /*else if (x.after(calendar7.getTime())) {
+                }*/ /*else if (x.after(calendar7.getTime())) {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray1, R.layout.spinnerfront2);
 
@@ -436,7 +436,7 @@ public class CartPageFragment extends Fragment {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray4, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar5.getTime())) {
+                } /*else if (x.after(calendar5.getTime())) {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray5, R.layout.spinnerfront2);
 
@@ -444,7 +444,7 @@ public class CartPageFragment extends Fragment {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray6, R.layout.spinnerfront2);
 
-                }
+                }*/
 
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
                 timeslot.setAdapter(adapter);
@@ -498,19 +498,23 @@ public class CartPageFragment extends Fragment {
 
                 itemtotal.setText("₹" + sum);
 
-                if(sum >= 500){
+                if(sum >= 250){
 
                     Log.d("Frfbw_2", String.valueOf(sum));
                     Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
+                    tv_ship_price.setText("0");
                     double totsm = sum - coupon_amt;
 
                     paybleamount.setText("₹" + totsm);
                     Log.d("Frfbw_3", String.valueOf(totsm));
 
+
                 }else{
 
                     Log.d("Frfbw_2", String.valueOf(sum));
                     Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
+                    String str_delivery_ch = String.valueOf(delivery_ch);
+                    tv_ship_price.setText(str_delivery_ch);
                     double totsm = sum + delivery_ch - coupon_amt;
 
                     paybleamount.setText("₹" + totsm);
