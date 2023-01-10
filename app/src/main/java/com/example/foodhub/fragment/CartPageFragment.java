@@ -76,7 +76,7 @@ public class CartPageFragment extends Fragment {
     public static TextView paybleamount, tv_change, itemtotal, tv_ship_price, tv_checkout;
     ViewDialog progressbar;
     SessionManager session;
-    Spinner shippingchargename;
+    TextView shippingchargename;
     public static double sum = 0.00, delivery_ch = 0.00, coupon_amt = 0.00;
     String deliveryid, slotname = "", dateselected = "";
     RelativeLayout noitem_layout;
@@ -197,9 +197,14 @@ public class CartPageFragment extends Fragment {
             tv_change.setText("Change");
         }
 
-        getDeliveryCharges();
+        //getDeliveryCharges();
 
-        shippingchargename.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+        //tv_ship_price.setText("₹" + "50");
+
+        getTotal();
+
+        /*shippingchargename.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String del = shippingchargename.getItemAtPosition(shippingchargename.getSelectedItemPosition()).toString();
@@ -217,7 +222,7 @@ public class CartPageFragment extends Fragment {
                 // DO Nothing here
                 Toast.makeText(getActivity().getApplicationContext(), "Select Your City", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         date_txt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -500,6 +505,7 @@ public class CartPageFragment extends Fragment {
 
                 if(sum >= 250){
 
+                    delivery_ch = 0.0;
                     Log.d("Frfbw_2", String.valueOf(sum));
                     Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
                     tv_ship_price.setText("0");
@@ -510,6 +516,8 @@ public class CartPageFragment extends Fragment {
 
 
                 }else{
+
+                    delivery_ch = 50.0;
 
                     Log.d("Frfbw_2", String.valueOf(sum));
                     Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
@@ -560,7 +568,7 @@ public class CartPageFragment extends Fragment {
                                 ArrayAdapter<String> dataAdapterVehicle = new ArrayAdapter<String>(getActivity(),
                                         R.layout.spinnerdropdownitem, deliverychargesarray);
                                 dataAdapterVehicle.setDropDownViewResource(R.layout.spinneritem);
-                                shippingchargename.setAdapter(dataAdapterVehicle);
+                                //shippingchargename.setAdapter(dataAdapterVehicle);
 //
 //                                SetRecent();
 
@@ -582,7 +590,7 @@ public class CartPageFragment extends Fragment {
                                         if (items[item].equals("Reload")) {
 
                                             dialog.dismiss();
-                                            getDeliveryCharges();
+                                          //  getDeliveryCharges();
 
                                         } else if (items[item].equals("Close")) {
                                             dialog.dismiss();
@@ -610,7 +618,7 @@ public class CartPageFragment extends Fragment {
                                     if (items[item].equals("Reload")) {
 
                                         dialog.dismiss();
-                                        getDeliveryCharges();
+                                      //  getDeliveryCharges();
 
                                     } else if (items[item].equals("Close")) {
                                         dialog.dismiss();
@@ -645,7 +653,7 @@ public class CartPageFragment extends Fragment {
                                 if (items[item].equals("Reload")) {
 
                                     dialog.dismiss();
-                                    getDeliveryCharges();
+                                   // getDeliveryCharges();
 
                                 } else if (items[item].equals("Close")) {
                                     dialog.dismiss();

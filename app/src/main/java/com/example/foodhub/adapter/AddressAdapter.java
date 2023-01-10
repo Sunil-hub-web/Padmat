@@ -175,7 +175,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
             address = (TextView) itemView.findViewById(R.id.address);
             statecitypin = (TextView) itemView.findViewById(R.id.statecitypin);
             phone = (TextView) itemView.findViewById(R.id.phone);
-            edit = (TextView) itemView.findViewById(R.id.edit);
+            //edit = (TextView) itemView.findViewById(R.id.edit);
             delete_address = (TextView) itemView.findViewById(R.id.delete_address);
             addresslayout = (LinearLayout) itemView.findViewById(R.id.addresslayout);
 

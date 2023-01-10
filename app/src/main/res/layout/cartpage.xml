@@ -106,7 +106,7 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/tv_checkout"
             android:layout_below="@+id/header"
-            android:visibility="gone"
+            android:visibility="visible"
             android:orientation="vertical">
 
             <androidx.core.widget.NestedScrollView
@@ -223,14 +223,14 @@
                                 android:layout_marginRight="@dimen/twenty"
                                 android:orientation="horizontal">
 
-                                <Spinner
+                                <TextView
                                     android:id="@+id/shippingchargename"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
                                     android:prompt="@string/prom"
                                     android:spinnerMode="dialog"
-                                    android:text="Shipping"
+                                    android:text="Delivery Charges"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/fifteen"
                                     android:textStyle="normal" />
