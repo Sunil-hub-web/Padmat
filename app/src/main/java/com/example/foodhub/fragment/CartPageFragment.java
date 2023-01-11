@@ -197,12 +197,13 @@ public class CartPageFragment extends Fragment {
             tv_change.setText("Change");
         }
 
-        //getDeliveryCharges();
+        getDeliveryCharges();
 
 
         //tv_ship_price.setText("₹" + "50");
 
         getTotal();
+        deliveryid = deliverychargesid.get(0);
 
         /*shippingchargename.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -551,17 +552,17 @@ public class CartPageFragment extends Fragment {
 
                                 for (int j = 0; j < latestarr.length(); j++) {
 
-                                    JSONObject latjo = latestarr.getJSONObject(j);
+                                    JSONObject latjo = latestarr.getJSONObject(0);
 
-                                    String shipping_id = latjo.getString("shipping_id");
+                                    deliveryid = latjo.getString("shipping_id");
                                     String price = latjo.getString("price");
                                     String delivery_price = latjo.getString("delivery_price");
                                     String name = latjo.getString("name");
 
 
-                                    deliverychargesarray.add(name);
-                                    deliverychargesid.put(name, shipping_id);
-                                    deliverychargesprice.put(name, price);
+                                    //deliverychargesarray.add(name);
+                                    //deliverychargesid.put(name, shipping_id);
+                                   // deliverychargesprice.put(name, price);
 
                                 }
 
@@ -590,7 +591,7 @@ public class CartPageFragment extends Fragment {
                                         if (items[item].equals("Reload")) {
 
                                             dialog.dismiss();
-                                          //  getDeliveryCharges();
+                                            getDeliveryCharges();
 
                                         } else if (items[item].equals("Close")) {
                                             dialog.dismiss();
@@ -618,7 +619,7 @@ public class CartPageFragment extends Fragment {
                                     if (items[item].equals("Reload")) {
 
                                         dialog.dismiss();
-                                      //  getDeliveryCharges();
+                                        getDeliveryCharges();
 
                                     } else if (items[item].equals("Close")) {
                                         dialog.dismiss();
@@ -653,7 +654,7 @@ public class CartPageFragment extends Fragment {
                                 if (items[item].equals("Reload")) {
 
                                     dialog.dismiss();
-                                   // getDeliveryCharges();
+                                    getDeliveryCharges();
 
                                 } else if (items[item].equals("Close")) {
                                     dialog.dismiss();
