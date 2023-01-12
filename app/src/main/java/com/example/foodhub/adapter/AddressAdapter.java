@@ -81,7 +81,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
             programViewHolder.statecitypin.setText(My_list.getCity_name()+", "+My_list.getState_name()+" ("+My_list.getPincode()+")");
 
 
-            programViewHolder.addresslayout.setOnClickListener(new View.OnClickListener() {
+           /* programViewHolder.addresslayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     session = new SessionManager(context);
@@ -102,7 +102,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
 
 
                 }
-            });
+            });*/
 
             programViewHolder.edit.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -175,7 +175,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
             address = (TextView) itemView.findViewById(R.id.address);
             statecitypin = (TextView) itemView.findViewById(R.id.statecitypin);
             phone = (TextView) itemView.findViewById(R.id.phone);
-            //edit = (TextView) itemView.findViewById(R.id.edit);
+            edit = (TextView) itemView.findViewById(R.id.edit);
             delete_address = (TextView) itemView.findViewById(R.id.delete_address);
             addresslayout = (LinearLayout) itemView.findViewById(R.id.addresslayout);
 
