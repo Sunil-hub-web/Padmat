@@ -64,7 +64,7 @@ public class AddresssDetails extends Fragment {
     HashMap<String, String> pinid = new HashMap<String, String>();
     String stid = "", ctid = "", pnid = "";
     Button save_proceed;
-    EditText edit_userName, edit_MobileNo, edit_Address;
+    EditText edit_userName, edit_MobileNo, edit_Address,edit_Landmark;
 
     public static int pos;
     public static ArrayList<AddressGetSet> addressarray = new ArrayList<AddressGetSet>();
@@ -100,6 +100,7 @@ public class AddresssDetails extends Fragment {
         edit_userName = dialog.findViewById(R.id.edit_userName);
         edit_MobileNo = dialog.findViewById(R.id.edit_MobileNo);
         edit_Address = dialog.findViewById(R.id.edit_Address);
+        edit_Landmark = dialog.findViewById(R.id.edit_Landmark);
         Button btn_Save = dialog.findViewById(R.id.btn_Save);
         Button btn_cancle = dialog.findViewById(R.id.btn_cancle);
 
@@ -198,6 +199,10 @@ public class AddresssDetails extends Fragment {
                 } else if (edit_MobileNo.getText().toString().trim().length() != 10) {
                     edit_MobileNo.setError("invalid number");
                     edit_MobileNo.requestFocus();
+
+                }else if (edit_Landmark.getText().toString().trim().equals("")) {
+                    edit_Landmark.setError("enter Landmark");
+                    edit_Landmark.requestFocus();
 
                 } else {
 
@@ -585,6 +590,7 @@ public class AddresssDetails extends Fragment {
                 params.put("pincode", pnid);
                 params.put("number", edit_MobileNo.getText().toString());
                 params.put("address", edit_Address.getText().toString());
+                params.put("landmark", edit_Landmark.getText().toString());
 
                 Log.d("paramsforhomeapi", "" + params);
 

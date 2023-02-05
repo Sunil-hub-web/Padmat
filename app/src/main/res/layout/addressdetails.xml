@@ -70,6 +70,16 @@
                 android:fontFamily="@font/sans_regular"
                 android:hint="address"></EditText>
 
+            <EditText
+                android:id="@+id/edit_Landmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfieldback"
+                android:padding="@dimen/twelve"
+                android:layout_margin="@dimen/ten"
+                android:fontFamily="@font/sans_regular"
+                android:hint="Landmark"></EditText>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

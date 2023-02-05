@@ -109,8 +109,6 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ProgramV
                 public void onClick(View view) {
 
                     session = new SessionManager(context);
-
-
                     session.setBillFirstANme(fooditem.get(i).getName());
                     session.setBillAddress1(fooditem.get(i).getAddres_id());
                     session.setBillAddres2(fooditem.get(i).getAddress()+", "+fooditem.get(i).getCity_name());
