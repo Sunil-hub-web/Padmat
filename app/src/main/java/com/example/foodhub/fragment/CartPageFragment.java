@@ -820,12 +820,9 @@ public class CartPageFragment extends Fragment {
                     price_variation_id = price_variation_id + "," + cartItem.getVarient_id();
                 }
 
-
                 Log.d("iteskndfb", "CreateProductArray 2: " + product_id);
                 Log.d("iteskndfb", "CreateProductArray 3: " + qty);
                 Log.d("iteskndfb", "CreateProductArray 4: " + price_variation_id);
-
-
             }
 
             PlaceOrder();
