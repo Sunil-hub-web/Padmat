@@ -33,7 +33,7 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView orderid, date, status, amount, deliverydate;
+        public TextView orderid, date, status, amount, deliverydate,addressDetails;
         public RecyclerView orderitems_rv;
         public RelativeLayout deliverylay;
 
@@ -46,6 +46,7 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
             orderitems_rv =   view.findViewById(R.id.orderitems_rv);
             deliverydate =   view.findViewById(R.id.deliverydate);
             deliverylay =   view.findViewById(R.id.deliverylay);
+            addressDetails =   view.findViewById(R.id.addressDetails);
 
 
         }
@@ -75,6 +76,7 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
         holder. deliverydate.setText("Delivery Date : "+category.getDatetime());
         holder. status.setText("Status : "+category.getOrder_status());
         holder. amount.setText("₹ "+category.getTotal());
+        holder.addressDetails.setText(category.getAddressDetails());
 
         String inputPattern = "dd.MM.yyyy";
         String outputPattern = "dd MMM yyyy";

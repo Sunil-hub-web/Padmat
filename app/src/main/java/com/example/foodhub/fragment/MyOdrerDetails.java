@@ -169,8 +169,6 @@ public class MyOdrerDetails extends Fragment {
 
                                         DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-d");
                                         DateFormat outputFormat = new SimpleDateFormat("dd-MM-yyyy");
-
-
                                         Date date = null;
                                         try {
                                             date = inputFormat.parse(delivery_date);
@@ -189,6 +187,7 @@ public class MyOdrerDetails extends Fragment {
                                     for(int m = 0; m< Order_details.length(); m++) {
 
                                         JSONObject item_details = Order_details.getJSONObject(m);
+
                                         String id = item_details.getString("id");
                                         String name = item_details.getString("name");
                                         String qty = item_details.getString("qty");
@@ -200,7 +199,19 @@ public class MyOdrerDetails extends Fragment {
                                         orderitemarray.add(new OrderItemGetSet(id, name, qty, img, price, weight));
                                     }
 
-                                    orderarray.add(new OrderGetSet(order_id, order_status, shiping_type, shipping_charge, payment_mode, subtotal, total, delivery_date, orderitemarray));
+                                    String addressdet = productt_json.getString("Address");
+                                    JSONObject jsonObject_address = new JSONObject(addressdet);
+
+                                    String nameAdd = jsonObject_address.getString("name");
+                                    String state = jsonObject_address.getString("state");
+                                    String city = jsonObject_address.getString("city");
+                                    String pincode = jsonObject_address.getString("pincode");
+                                    String address = jsonObject_address.getString("address");
+                                    String phone = jsonObject_address.getString("phone");
+
+                                    String addressDetails = nameAdd+", "+state+", "+city+", "+pincode+", "+address+", "+phone;
+
+                                    orderarray.add(new OrderGetSet(order_id, order_status, shiping_type, shipping_charge, payment_mode, subtotal, total, delivery_date, orderitemarray,addressDetails));
 
                                 }
 //                                AddressAdapter adpater = new AddressAdapter(addressarray, AddressList.this);

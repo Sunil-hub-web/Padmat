@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class OrderGetSet {
 
-    String order_id, order_status, shiping_type, shipping_charge, payment_mode, subtotal, total, datetime;
+    String order_id, order_status, shiping_type, shipping_charge, payment_mode, subtotal, total, datetime,addressDetails;
     ArrayList<OrderItemGetSet> itemsarray;
 
-    public OrderGetSet(String order_id, String order_status, String shiping_type, String shipping_charge, String payment_mode, String subtotal, String total, String datetime, ArrayList<OrderItemGetSet> itemsarray) {
+    public OrderGetSet(String order_id, String order_status, String shiping_type, String shipping_charge, String payment_mode, String subtotal, String total, String datetime, ArrayList<OrderItemGetSet> itemsarray,String addressDetails) {
         this.order_id = order_id;
         this.order_status = order_status;
         this.shiping_type = shiping_type;
@@ -17,6 +17,7 @@ public class OrderGetSet {
         this.total = total;
         this.datetime = datetime;
         this.itemsarray = itemsarray;
+        this.addressDetails = addressDetails;
     }
 
 
@@ -99,5 +100,13 @@ public class OrderGetSet {
     public OrderGetSet setDatetime(String datetime) {
         this.datetime = datetime;
         return this;
+    }
+
+    public String getAddressDetails() {
+        return addressDetails;
+    }
+
+    public void setAddressDetails(String addressDetails) {
+        this.addressDetails = addressDetails;
     }
 }

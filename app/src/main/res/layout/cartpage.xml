@@ -697,7 +697,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/twenty"
-                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginTop="@dimen/twenty"
                         android:layout_marginRight="@dimen/twenty"
                         android:orientation="horizontal">
 
