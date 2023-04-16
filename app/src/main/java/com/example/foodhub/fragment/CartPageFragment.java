@@ -350,40 +350,50 @@ public class CartPageFragment extends Fragment {
 
             try {
 
-                Date time1 = new SimpleDateFormat("HH:mm:ss").parse("07:00:00");
+                Date time1 = new SimpleDateFormat("HH:mm:ss").parse("04:00:00");
                 Calendar calendar1 = Calendar.getInstance();
                 calendar1.setTime(time1);
-                calendar1.add(Calendar.DATE, 1);
+                calendar1.add(Calendar.DATE, 0);
 
-                Date time2 = new SimpleDateFormat("HH:mm:ss").parse("09:00:00");
+                Date time2 = new SimpleDateFormat("HH:mm:ss").parse("05:00:00");
                 Calendar calendar2 = Calendar.getInstance();
                 calendar2.setTime(time2);
-                calendar2.add(Calendar.DATE, 1);
+                calendar2.add(Calendar.DATE, 0);
 
-                Date time3 = new SimpleDateFormat("HH:mm:ss").parse("11:00:00");
+                Date time3 = new SimpleDateFormat("HH:mm:ss").parse("06:00:00");
                 Calendar calendar3 = Calendar.getInstance();
                 calendar3.setTime(time3);
-                calendar3.add(Calendar.DATE, 1);
+                calendar3.add(Calendar.DATE, 0);
 
-                Date time4 = new SimpleDateFormat("HH:mm:ss").parse("13:00:00");
+                Date time4 = new SimpleDateFormat("HH:mm:ss").parse("07:00:00");
                 Calendar calendar4 = Calendar.getInstance();
                 calendar4.setTime(time4);
-                calendar4.add(Calendar.DATE, 1);
+                calendar4.add(Calendar.DATE, 0);
 
-                Date time5 = new SimpleDateFormat("HH:mm:ss").parse("15:00:00");
+                Date time5 = new SimpleDateFormat("HH:mm:ss").parse("08:00:00");
                 Calendar calendar5 = Calendar.getInstance();
                 calendar5.setTime(time5);
-                calendar5.add(Calendar.DATE, 1);
+                calendar5.add(Calendar.DATE, 0);
 
-                Date time6 = new SimpleDateFormat("HH:mm:ss").parse("17:00:00");
+                Date time6 = new SimpleDateFormat("HH:mm:ss").parse("09:00:00");
                 Calendar calendar6 = Calendar.getInstance();
                 calendar6.setTime(time6);
-                calendar6.add(Calendar.DATE, 1);
+                calendar6.add(Calendar.DATE, 0);
 
-                Date time7 = new SimpleDateFormat("HH:mm:ss").parse("18:00:00");
+                Date time7 = new SimpleDateFormat("HH:mm:ss").parse("10:00:00");
                 Calendar calendar7 = Calendar.getInstance();
                 calendar7.setTime(time7);
-                calendar7.add(Calendar.DATE, 1);
+                calendar7.add(Calendar.DATE, 0);
+
+                Date time8 = new SimpleDateFormat("HH:mm:ss").parse("11:00:00");
+                Calendar calendar8 = Calendar.getInstance();
+                calendar8.setTime(time8);
+                calendar8.add(Calendar.DATE, 0);
+
+                Date time9 = new SimpleDateFormat("HH:mm:ss").parse("12:00:00");
+                Calendar calendar9 = Calendar.getInstance();
+                calendar9.setTime(time9);
+                calendar9.add(Calendar.DATE, 0);
 
                 Date x = Calendar.getInstance().getTime();
 //                final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
@@ -396,61 +406,46 @@ public class CartPageFragment extends Fragment {
                 Log.d("mkfgud_5", "" + calendar5.getTime());
                 Log.d("mkfgud_6", "" + calendar6.getTime());
                 Log.d("mkfgud_7", "" + calendar7.getTime());
-                Log.d("mkfgud_8", "" + x);
+                Log.d("mkfgud_9", "" + calendar8.getTime());
+                Log.d("mkfgud_10", "" + x);
 
-                if (x.before(calendar1.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray1, R.layout.spinnerfront2);
-
-                } else if (x.before(calendar2.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray2, R.layout.spinnerfront2);
-
-                } else if (x.before(calendar3.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray3, R.layout.spinnerfront2);
-
-                } else if (x.before(calendar4.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray4, R.layout.spinnerfront2);
-
-                } /*else if (x.before(calendar5.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray5, R.layout.spinnerfront2);
-
-                } else if (x.before(calendar6.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray6, R.layout.spinnerfront2);
-
-                }*/ /*else if (x.after(calendar7.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
-                            R.array.timearray1, R.layout.spinnerfront2);
-
-                }*/ else if (x.after(calendar1.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                if (x.after(calendar1.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getContext(),
                             R.array.timearray1, R.layout.spinnerfront2);
 
                 } else if (x.after(calendar2.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                    adapter = ArrayAdapter.createFromResource(getContext(),
                             R.array.timearray2, R.layout.spinnerfront2);
 
                 } else if (x.after(calendar3.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                    adapter = ArrayAdapter.createFromResource(getContext(),
                             R.array.timearray3, R.layout.spinnerfront2);
 
                 } else if (x.after(calendar4.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                    adapter = ArrayAdapter.createFromResource(getContext(),
                             R.array.timearray4, R.layout.spinnerfront2);
 
-                } /*else if (x.after(calendar5.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                } else if (x.after(calendar5.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getContext(),
                             R.array.timearray5, R.layout.spinnerfront2);
 
                 } else if (x.after(calendar6.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                    adapter = ArrayAdapter.createFromResource(getContext(),
                             R.array.timearray6, R.layout.spinnerfront2);
 
-                }*/
+                } else if (x.after(calendar7.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getContext(),
+                            R.array.timearray7, R.layout.spinnerfront2);
+
+                }else if (x.after(calendar8.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getContext(),
+                            R.array.timearray8, R.layout.spinnerfront2);
+
+                }else if (x.before(calendar9.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getContext(),
+                            R.array.timearray9, R.layout.spinnerfront2);
+
+                }
 
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
                 timeslot.setAdapter(adapter);
@@ -460,7 +455,7 @@ public class CartPageFragment extends Fragment {
 
 
         } else {
-            adapter = ArrayAdapter.createFromResource(getActivity(),
+            adapter = ArrayAdapter.createFromResource(getContext(),
                     R.array.timearray1, R.layout.spinnerfront2);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
             timeslot.setAdapter(adapter);

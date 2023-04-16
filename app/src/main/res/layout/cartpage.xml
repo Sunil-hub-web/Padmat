@@ -675,7 +675,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/twenty"
                         android:layout_marginRight="@dimen/twenty"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:background="@drawable/background">
 
                         <TextView
                             android:id="@+id/date_txt"
@@ -720,12 +721,13 @@
                         android:layout_marginTop="@dimen/ten"
                         android:layout_marginRight="@dimen/twenty"
                         android:layout_marginBottom="@dimen/five"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:background="@drawable/background">
 
                         <Spinner
                             android:id="@+id/timeslot"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/fifty"
+                            android:layout_height="@dimen/forty"
                             android:layout_alignParentLeft="true"
                             android:prompt="@string/prom"
                             android:spinnerMode="dropdown"

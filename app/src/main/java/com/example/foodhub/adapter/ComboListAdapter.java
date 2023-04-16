@@ -73,6 +73,7 @@ public class ComboListAdapter extends RecyclerView.Adapter<ComboListAdapter.Prog
             programViewHolder.restrurant_food_name.setText(My_list.getName());
             programViewHolder.restt_price.setText("₹ " +My_list.getSales_price());
             programViewHolder.discount.setText(My_list.getRegular_price());
+            programViewHolder.restrurant_food_descript.setText(My_list.getDescription());
             programViewHolder.discount.setPaintFlags(programViewHolder.discount.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
             Glide.with(context).load(
@@ -384,7 +385,7 @@ public class ComboListAdapter extends RecyclerView.Adapter<ComboListAdapter.Prog
     }
 
     public class ProgramViewHolder extends RecyclerView.ViewHolder {
-        TextView restrurant_food_name, restt_price, tv_minus, tv_plus, tv_count, addtext, discount,spinertext;
+        TextView restrurant_food_name, restt_price, tv_minus, tv_plus, tv_count, addtext, discount,spinertext,restrurant_food_descript;
         LinearLayout l_add, l_add_cart, lay;
         Button add;
         ImageView imag_food;
@@ -405,6 +406,7 @@ public class ComboListAdapter extends RecyclerView.Adapter<ComboListAdapter.Prog
             l_add_cart = (LinearLayout) itemView.findViewById(R.id.l_add_cart);
             spinertext = (TextView) itemView.findViewById(R.id.spinertext);
             varlayout = (RelativeLayout) itemView.findViewById(R.id.varlayout);
+            restrurant_food_descript = (TextView) itemView.findViewById(R.id.restrurant_food_descript);
 
 
         }

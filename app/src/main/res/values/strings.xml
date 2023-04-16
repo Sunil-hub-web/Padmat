@@ -7,28 +7,111 @@
 
     <string-array name="timearray1">
         <item>Select time slot</item>
+        <item> </item>
+        <item>4PM-5PM</item>
+        <item> </item>
         <item>5PM-6PM</item>
+        <item> </item>
         <item>6PM-7PM</item>
+        <item> </item>
         <item>7PM-8PM</item>
+        <item> </item>
         <item>8PM-9PM</item>
+        <item> </item>
+        <item>9PM-10PM</item>
+        <item> </item>
+        <item>10PM-11PM</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
     </string-array>
+
     <string-array name="timearray2">
         <item>Select time slot</item>
+        <item> </item>
+        <item>5PM-6PM</item>
+        <item> </item>
         <item>6PM-7PM</item>
+        <item> </item>
         <item>7PM-8PM</item>
+        <item> </item>
         <item>8PM-9PM</item>
+        <item> </item>
+        <item>9PM-10PM</item>
+        <item> </item>
+        <item>10PM-11PM</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
     </string-array>
     <string-array name="timearray3">
         <item>Select time slot</item>
+        <item> </item>
+        <item>6PM-7PM</item>
+        <item> </item>
         <item>7PM-8PM</item>
+        <item> </item>
         <item>8PM-9PM</item>
+        <item> </item>
+        <item>9PM-10PM</item>
+        <item> </item>
+        <item>10PM-11PM</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
     </string-array>
     <string-array name="timearray4">
         <item>Select time slot</item>
+        <item> </item>
+        <item>7PM-8PM</item>
+        <item> </item>
         <item>8PM-9PM</item>
+        <item> </item>
+        <item>9PM-10PM</item>
+        <item> </item>
+        <item>10PM-11PM</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
+    </string-array>
+    <string-array name="timearray5">
+        <item>Select time slot</item>
+        <item> </item>
+        <item>8PM-9PM</item>
+        <item> </item>
+        <item>9PM-10PM</item>
+        <item> </item>
+        <item>10PM-11PM</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
+    </string-array>
+    <string-array name="timearray6">
+        <item>Select time slot</item>
+        <item> </item>
+        <item>9PM-10PM</item>
+        <item> </item>
+        <item>10PM-11PM</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
     </string-array>
     <string-array name="timearray7">
-        <item>No slots available</item>
+        <item>Select time slot</item>
+        <item> </item>
+        <item>10PM-11PM</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
     </string-array>
-
+    <string-array name="timearray8">
+        <item>Select time slot</item>
+        <item> </item>
+        <item>11PM-12AM</item>
+        <item> </item>
+    </string-array>
+    <string-array name="timearray9">
+        <item>No slots available</item>
+        <item> </item>
+    </string-array>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.foodhub.fragment;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.TextUtils;
@@ -29,6 +30,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.foodhub.OTPVerifactionPage;
 import com.example.foodhub.R;
+import com.example.foodhub.TeramAndCondition;
 import com.example.foodhub.databinding.ActivityRegisterPageBinding;
 import com.example.foodhub.extra.ServerLinks;
 import com.example.foodhub.extra.SessionManager;
@@ -61,9 +63,18 @@ public class RegisterPage extends Fragment {
         progressbar = new ViewDialog(getActivity());
         session = new SessionManager(getActivity());
 
-        String checkBox_html = "<font color=#817F7F>Read our   </font> <font color=#e09441><b><u>Terms &amp; Conditions</u></b></font>";
+        //String checkBox_html = "<font color=#817F7F>Read our   </font> <font color=#e09441><b><u>Terms &amp; Conditions</u></b></font>";
+        String checkBox_html = "<font color=#817F7F>Read our   </font>";
         binding.termsconditions.setText(Html.fromHtml(checkBox_html));
+        binding.textTeramcondition.setText("Terms & Conditions");
+        binding.textTeramcondition.setPaintFlags(binding.textTeramcondition.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        binding.textTeramcondition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                startActivity(new Intent(getContext(), TeramAndCondition.class));
+            }
+        });
         binding.btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -7,18 +7,17 @@
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="45dp"
+    android:layout_height="wrap_content"
     android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
     android:gravity="center_vertical"
     android:maxLines="1"
     android:text="dvdf vc"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
+    android:padding="10dp"
     android:drawableTint="@color/white"
     android:textColor="@color/some_color3"
     android:textSize="12sp"
     android:fontFamily="@font/sans_regular"
-    android:layout_margin="@dimen/ten"/>
+    android:layout_margin="@dimen/twenty"/>
 
     <!--<ImageView-->
     <!--android:layout_width="50dp"-->

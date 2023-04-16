@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/five"
-    app:cardCornerRadius="@dimen/ten"
-    android:background="@color/white">
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/ten">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,16 +30,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="@dimen/forty"
-                android:visibility="gone"
+                android:layout_marginTop="@dimen/ten"
                 android:background="@drawable/btn_cart"
                 android:paddingLeft="@dimen/eight"
-                android:layout_marginTop="@dimen/ten"
                 android:paddingTop="@dimen/four"
                 android:paddingRight="@dimen/eight"
                 android:paddingBottom="@dimen/four"
                 android:text="40% OFF"
                 android:textColor="@color/white"
-                android:textSize="@dimen/eleven" />
+                android:textSize="@dimen/eleven"
+                android:visibility="gone" />
 
         </RelativeLayout>
 
@@ -52,26 +52,48 @@
             android:paddingLeft="6dp"
             android:paddingRight="6dp">
 
-
             <TextView
                 android:id="@+id/restrurant_food_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:fontFamily="@font/sans_regular"
                 android:maxLines="2"
                 android:text="Paneer Roll"
-                android:fontFamily="@font/sans_regular"
                 android:textColor="@color/black"
                 android:textSize="@dimen/fourteen" />
+
         </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_descript"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/food_type"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp">
+
+            <TextView
+                android:id="@+id/restrurant_food_descript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/sans_regular"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fourteen" />
+
+        </RelativeLayout>
+
 
         <RelativeLayout
             android:id="@+id/varlayout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/twenty_five"
             android:layout_marginLeft="@dimen/five"
-            android:layout_marginRight="@dimen/five"
-            android:layout_marginTop="@dimen/five">
+            android:layout_marginTop="@dimen/five"
+            android:layout_marginRight="@dimen/five">
 
             <TextView
                 android:id="@+id/spinertext"
@@ -81,9 +103,9 @@
                 android:background="@drawable/box"
                 android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
                 android:drawableTint="@color/some_color"
+                android:fontFamily="@font/sans_regular"
                 android:gravity="center"
                 android:text=""
-                android:fontFamily="@font/sans_regular"
                 android:textSize="@dimen/thirteen">
 
             </TextView>
@@ -103,10 +125,10 @@
                 android:layout_centerInParent="true"
                 android:layout_marginTop="5dp"
                 android:layout_toLeftOf="@+id/addlay"
+                android:fontFamily="@font/sans_bold"
                 android:maxLength="30"
                 android:paddingLeft="@dimen/five"
                 android:paddingRight="@dimen/five"
-                android:fontFamily="@font/sans_bold"
                 android:text="Rs "
                 android:textColor="@color/some_color"
                 android:textSize="@dimen/thirteen" />
@@ -115,9 +137,9 @@
                 android:id="@+id/addlay"
                 android:layout_width="@dimen/hundred"
                 android:layout_height="@dimen/forty"
+                android:layout_alignParentRight="true"
                 android:paddingLeft="6dp"
                 android:paddingRight="6dp"
-                android:layout_alignParentRight="true"
                 android:paddingBottom="6dp">
 
 
@@ -139,12 +161,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/add_bg"
+                            android:fontFamily="@font/sans_bold"
                             android:gravity="center"
                             android:text="Add"
-                            android:fontFamily="@font/sans_bold"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/fourteen"/>
-
+                            android:textSize="@dimen/fourteen" />
 
 
                     </LinearLayout>
@@ -164,9 +185,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@drawable/btn_minus__count"
+                            android:fontFamily="@font/sans_bold"
                             android:gravity="center"
                             android:text="-"
-                            android:fontFamily="@font/sans_bold"
                             android:textColor="@color/white"
                             android:textSize="@dimen/eighteen" />
 
@@ -176,11 +197,11 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@color/white"
+                            android:fontFamily="@font/sans_bold"
                             android:gravity="center"
                             android:text="0"
-                            android:fontFamily="@font/sans_bold"
                             android:textColor="@color/some_color1"
-                            android:textSize="@dimen/twelve"/>
+                            android:textSize="@dimen/twelve" />
 
                         <TextView
                             android:id="@+id/tv_plus"
@@ -188,11 +209,11 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@drawable/btn_plus_count"
+                            android:fontFamily="@font/sans_bold"
                             android:gravity="center"
                             android:text="+"
-                            android:fontFamily="@font/sans_bold"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/fifteen"/>
+                            android:textSize="@dimen/fifteen" />
 
                     </LinearLayout>
 
@@ -202,16 +223,15 @@
                     android:id="@+id/outofstock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:visibility="gone"
-                    android:background="@drawable/restrurant_white_box"
-                    android:textColor="@color/black"
-                    android:text="Out of Stock"
+                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"/>
+                    android:background="@drawable/restrurant_white_box"
+                    android:padding="5dp"
+                    android:text="Out of Stock"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
 
             </RelativeLayout>
-
 
 
         </RelativeLayout>

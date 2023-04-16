@@ -19,12 +19,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/ten"
-                android:text="This is mamdatary in order to complete and stand a"
+                android:text="Use You Mobile No and Password For Login"
                 android:textColor="@color/some_color3"
                 android:textSize="15dp"
                 android:fontFamily="@font/sans_regular"></TextView>
 
-            <TextView
+           <!-- <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
                 android:text="chance to get rewarded"
                 android:textColor="@color/some_color3"
                 android:textSize="15dp"
-                android:fontFamily="@font/sans_regular"></TextView>
+                android:fontFamily="@font/sans_regular"></TextView>-->
 
             <LinearLayout
                 android:id="@+id/card"

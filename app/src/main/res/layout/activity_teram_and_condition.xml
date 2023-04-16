@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeramAndCondition">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:id="@+id/rel_Close"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/appclose"
+                android:layout_width="@dimen/forty"
+                android:layout_height="@dimen/forty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/five"
+                android:src="@drawable/previous"
+                android:layout_margin="@dimen/five">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel_Close">
+
+        </WebView>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

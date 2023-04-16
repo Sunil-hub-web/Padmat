@@ -67,6 +67,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
 
 
             programViewHolder.restrurant_food_name.setText(My_list.getName());
+            programViewHolder.restrurant_food_descript.setText(My_list.getDescription());
 
             programViewHolder.spinertext.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -405,7 +406,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
     }
 
     public class ProgramViewHolder extends RecyclerView.ViewHolder {
-        TextView restrurant_food_name, restt_price, tv_minus, tv_plus, tv_count, addtext, discount, spinertext;
+        TextView restrurant_food_name, restt_price, tv_minus, tv_plus, tv_count, addtext, discount, spinertext,restrurant_food_descript;
         LinearLayout l_add, l_add_cart, lay;
         Button add;
         ImageView imag_food;
@@ -426,6 +427,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.Progra
             l_add = (LinearLayout) itemView.findViewById(R.id.l_add);
             l_add_cart = (LinearLayout) itemView.findViewById(R.id.l_add_cart);
             varlayout = (RelativeLayout) itemView.findViewById(R.id.varlayout);
+            restrurant_food_descript = (TextView) itemView.findViewById(R.id.restrurant_food_descript);
 
 
         }
