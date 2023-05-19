@@ -27,7 +27,7 @@
         <item>Select time slot</item>
         <item>8PM-9PM</item>
     </string-array>
-    <string-array name="timearray7">
+    <string-array name="timearray0">
         <item>No slots available</item>
     </string-array>
 
