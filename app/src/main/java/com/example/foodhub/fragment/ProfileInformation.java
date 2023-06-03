@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
@@ -63,6 +64,35 @@ public class ProfileInformation extends Fragment {
 
 
 
+
+            }
+        });
+
+        binding.btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               if ( binding.editFillname.getText().toString().equals("")){
+
+                   Toast.makeText(getActivity(), "Enter Full Name", Toast.LENGTH_SHORT).show();
+
+               } else if (binding.editMobileNo.getText().toString().equals("")) {
+
+                   Toast.makeText(getActivity(), "Enter Your Contact No", Toast.LENGTH_SHORT).show();
+
+               }else if (binding.editEmailId.getText().toString().equals("")) {
+
+                   Toast.makeText(getActivity(), "Enter Your Email Id", Toast.LENGTH_SHORT).show();
+
+               }else{
+
+                   String fullname = binding.editFillname.getText().toString();
+                   String mobileno = binding.editMobileNo.getText().toString();
+                   String emailid = binding.editEmailId.getText().toString();
+
+                   updateProfile(session.getUserID(),fullname,emailid,mobileno);
+
+               }
             }
         });
 
@@ -138,6 +168,71 @@ public class ProfileInformation extends Fragment {
             }
         };
 
+        stringRequest.setRetryPolicy(new
+                DefaultRetryPolicy(30000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
+        requestQueue.getCache().clear();
+        requestQueue.add(stringRequest);
+    }
+    public void updateProfile(String userid, String name, String email, String num){
+
+        progressbar.showDialog();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerLinks.UpProfile, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                Log.d("cityget", response);
+
+                progressbar.hideDialog();
+
+                try {
+
+                    JSONObject jsonObject = new JSONObject(response);
+                    String success = jsonObject.getString("success");
+                    String msg = jsonObject.getString("msg");
+
+                    if (success.equals("true")){
+
+                        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+
+                    }else{
+
+                        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                progressbar.hideDialog();
+                Log.d("error_response", error.toString());
+                if (error instanceof TimeoutError || error instanceof NoConnectionError) {
+
+                    Toast.makeText(getActivity().getApplicationContext(), "Please check Internet Connection", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    Toast.makeText(getActivity().getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                }
+            }
+        }){
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String,String> params = new HashMap<>();
+                params.put("id",session.getUserID());
+                params.put("name",name);
+                params.put("email",email);
+                params.put("num",num);
+                params.put("user_name","");
+                return params;
+            }
+        };
         stringRequest.setRetryPolicy(new
                 DefaultRetryPolicy(30000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());

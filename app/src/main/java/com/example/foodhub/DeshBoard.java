@@ -168,7 +168,7 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
                 ft.commit();
 
                 text_name.setTextSize(18);
-                text_name.setText("PersonalInformation");
+                text_name.setText("Personal Information ");
 
 
             }
@@ -290,7 +290,7 @@ public class DeshBoard extends AppCompatActivity implements NavigationView.OnNav
                         //logo.setVisibility(View.GONE);
                         search.setVisibility(View.GONE);
                         text_name.setTextSize(18);
-                        text_name.setText("PersonalInformation");
+                        text_name.setText("Personal Information");
                         //text_address.setVisibility(View.GONE);
 
                         break;

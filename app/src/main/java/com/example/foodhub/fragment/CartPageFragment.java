@@ -62,6 +62,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class CartPageFragment extends Fragment {
@@ -78,7 +79,7 @@ public class CartPageFragment extends Fragment {
     SessionManager session;
     TextView shippingchargename;
     public static double sum = 0.00, delivery_ch = 0.00, coupon_amt = 0.00;
-    String deliveryid, slotname = "", dateselected = "";
+    public static String deliveryid, slotname = "", dateselected = "", deliverych = "";
     RelativeLayout noitem_layout;
     LinearLayout cartlayout, datetimeslot_layout;
     TextView name_txt, address_txt, pincode_txt, phoneno_txt, date_txt;
@@ -240,7 +241,7 @@ public class CartPageFragment extends Fragment {
                             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
 //                                edit_date.setText(year + "-" + (month + 1) + "-" + day);
 
-                                DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-d");
+                                DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
                                 DateFormat outputFormat = new SimpleDateFormat("dd-MM-yyyy");
                                 String inputDateStr = year + "-" + (month + 1) + "-" + day;
                                 Log.d("sufifn", inputDateStr);
@@ -253,7 +254,7 @@ public class CartPageFragment extends Fragment {
                                 }
                                 String outputDateStr = outputFormat.format(date);
 
-                                date_txt.setText(outputDateStr);
+                                date_txt.setText(inputDateStr);
                                 setSpinnerData();
 //                                fragHome_Date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
@@ -349,113 +350,107 @@ public class CartPageFragment extends Fragment {
         if (DateUtils.isToday(timeInMilliseconds)) {
 
             try {
-
-                Date time1 = new SimpleDateFormat("HH:mm:ss").parse("04:00:00");
                 Calendar calendar1 = Calendar.getInstance();
-                calendar1.setTime(time1);
-                calendar1.add(Calendar.DATE, 0);
+                calendar1.set(Calendar.HOUR_OF_DAY, 16);
+                calendar1.set(Calendar.MINUTE, 0);
+                calendar1.set(Calendar.SECOND, 0);
 
-                Date time2 = new SimpleDateFormat("HH:mm:ss").parse("05:00:00");
                 Calendar calendar2 = Calendar.getInstance();
-                calendar2.setTime(time2);
-                calendar2.add(Calendar.DATE, 0);
+                calendar2.set(Calendar.HOUR_OF_DAY, 17);
+                calendar2.set(Calendar.MINUTE, 0);
+                calendar2.set(Calendar.SECOND, 0);
 
-                Date time3 = new SimpleDateFormat("HH:mm:ss").parse("06:00:00");
                 Calendar calendar3 = Calendar.getInstance();
-                calendar3.setTime(time3);
-                calendar3.add(Calendar.DATE, 0);
+                calendar3.set(Calendar.HOUR_OF_DAY, 18);
+                calendar3.set(Calendar.MINUTE, 0);
+                calendar3.set(Calendar.SECOND, 0);
 
-                Date time4 = new SimpleDateFormat("HH:mm:ss").parse("07:00:00");
                 Calendar calendar4 = Calendar.getInstance();
-                calendar4.setTime(time4);
-                calendar4.add(Calendar.DATE, 0);
+                calendar4.set(Calendar.HOUR_OF_DAY, 19);
+                calendar4.set(Calendar.MINUTE, 0);
+                calendar4.set(Calendar.SECOND, 0);
 
-                Date time5 = new SimpleDateFormat("HH:mm:ss").parse("08:00:00");
                 Calendar calendar5 = Calendar.getInstance();
-                calendar5.setTime(time5);
-                calendar5.add(Calendar.DATE, 0);
+                calendar5.set(Calendar.HOUR_OF_DAY, 20);
+                calendar5.set(Calendar.MINUTE, 0);
+                calendar5.set(Calendar.SECOND, 0);
 
-                Date time6 = new SimpleDateFormat("HH:mm:ss").parse("09:00:00");
                 Calendar calendar6 = Calendar.getInstance();
-                calendar6.setTime(time6);
-                calendar6.add(Calendar.DATE, 0);
+                calendar6.set(Calendar.HOUR_OF_DAY, 21);
+                calendar6.set(Calendar.MINUTE, 0);
+                calendar6.set(Calendar.SECOND, 0);
 
-                Date time7 = new SimpleDateFormat("HH:mm:ss").parse("10:00:00");
                 Calendar calendar7 = Calendar.getInstance();
-                calendar7.setTime(time7);
-                calendar7.add(Calendar.DATE, 0);
+                calendar7.set(Calendar.HOUR_OF_DAY, 22);
+                calendar7.set(Calendar.MINUTE, 0);
+                calendar7.set(Calendar.SECOND, 0);
 
-                Date time8 = new SimpleDateFormat("HH:mm:ss").parse("11:00:00");
                 Calendar calendar8 = Calendar.getInstance();
-                calendar8.setTime(time8);
-                calendar8.add(Calendar.DATE, 0);
+                calendar8.set(Calendar.HOUR_OF_DAY, 23);
+                calendar8.set(Calendar.MINUTE, 0);
+                calendar8.set(Calendar.SECOND, 0);
 
-                Date time9 = new SimpleDateFormat("HH:mm:ss").parse("12:00:00");
-                Calendar calendar9 = Calendar.getInstance();
-                calendar9.setTime(time9);
-                calendar9.add(Calendar.DATE, 0);
+                Date x = new Date();
 
-                Date x = Calendar.getInstance().getTime();
-//                final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-//                Date x = dateFormat.format(new Date());
+                Log.d("mkfgud", "mkfgud_1 " + calendar1.getTime());
+                Log.d("mkfgud", "mkfgud_2 " + calendar2.getTime());
+                Log.d("mkfgud", "mkfgud_3 " + calendar3.getTime());
+                Log.d("mkfgud", "mkfgud_4 " + calendar4.getTime());
+                Log.d("mkfgud", "mkfgud_5 " + calendar5.getTime());
+                Log.d("mkfgud", "mkfgud_8 " + x);
 
-                Log.d("mkfgud_1", "" + calendar1.getTime());
-                Log.d("mkfgud_2", "" + calendar2.getTime());
-                Log.d("mkfgud_3", "" + calendar3.getTime());
-                Log.d("mkfgud_4", "" + calendar4.getTime());
-                Log.d("mkfgud_5", "" + calendar5.getTime());
-                Log.d("mkfgud_6", "" + calendar6.getTime());
-                Log.d("mkfgud_7", "" + calendar7.getTime());
-                Log.d("mkfgud_9", "" + calendar8.getTime());
-                Log.d("mkfgud_10", "" + x);
-
-                if (x.after(calendar1.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                if (x.before(calendar1.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray1, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar2.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                } else if (x.before(calendar2.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray2, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar3.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                } else if (x.before(calendar3.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray3, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar4.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                } else if (x.before(calendar4.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray4, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar5.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                } else if (x.before(calendar5.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray5, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar6.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                } else if(x.before(calendar6.getTime())){
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray6, R.layout.spinnerfront2);
 
-                } else if (x.after(calendar7.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                }else if(x.before(calendar7.getTime())){
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray7, R.layout.spinnerfront2);
 
-                }else if (x.after(calendar8.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                }else if(x.before(calendar8.getTime())){
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray8, R.layout.spinnerfront2);
 
-                }else if (x.before(calendar9.getTime())) {
-                    adapter = ArrayAdapter.createFromResource(getContext(),
+                }else if(x.after(calendar8.getTime())){
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray9, R.layout.spinnerfront2);
+
+                }else if (x.after(calendar1.getTime())) {
+                    adapter = ArrayAdapter.createFromResource(getActivity(),
+                            R.array.timearray1, R.layout.spinnerfront2);
 
                 }
 
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
                 timeslot.setAdapter(adapter);
-            } catch (ParseException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
+                Toast.makeText(getContext(),""+e,Toast.LENGTH_LONG).show();
             }
 
 
         } else {
-            adapter = ArrayAdapter.createFromResource(getContext(),
+            adapter = ArrayAdapter.createFromResource(getActivity(),
                     R.array.timearray1, R.layout.spinnerfront2);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
             timeslot.setAdapter(adapter);
@@ -466,7 +461,7 @@ public class CartPageFragment extends Fragment {
 
     public long getMilliFromDate(String dateFormat) {
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-d");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         try {
             date = formatter.parse(dateFormat);
         } catch (java.text.ParseException e) {
@@ -502,6 +497,8 @@ public class CartPageFragment extends Fragment {
                 if(sum >= 250){
 
                     delivery_ch = 0.0;
+                    deliverych = "0";
+
                     Log.d("Frfbw_2", String.valueOf(sum));
                     Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
                     tv_ship_price.setText("0");
@@ -514,6 +511,7 @@ public class CartPageFragment extends Fragment {
                 }else{
 
                     delivery_ch = 50.0;
+                    deliverych = "50";
 
                     Log.d("Frfbw_2", String.valueOf(sum));
                     Log.d("Frfbw_2.1", String.valueOf(delivery_ch));
@@ -762,7 +760,11 @@ public class CartPageFragment extends Fragment {
                 params.put("pay_mode", "cod");
                 params.put("delivery_date", dateselected);
                 params.put("AvalTimeSlot", slotname);
+                params.put("shippingcharge",deliverych);
+
+
                 Log.d("paramsforhomeapi", "" + params);
+                Log.d("shippingcharge",deliverych );
                 return params;
             }
         };

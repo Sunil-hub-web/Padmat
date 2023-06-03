@@ -25,6 +25,9 @@ public class ServerLinks {
     public static String change_password =  main_url+"method=change_password";
     public static String otpveryfy =  main_url+"method=otpveryfy";
     public static String registerotp =  main_url+"method=registerotp";
+    public static String UpProfile =  main_url+"method=UpProfile";
+
+
 
 
 }

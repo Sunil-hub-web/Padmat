@@ -92,17 +92,18 @@ public class RegisterPage extends Fragment {
                     binding.editMobileNumber.setError("Enter Your 10 Digit Mobile Number");
 
                 }
-//                else if (TextUtils.isEmpty(binding.editEmailId.getText())) {
-//
-//                    binding.editEmailId.setError("Please Enter EmailId");
-//
-//                }
+                else if (TextUtils.isEmpty(binding.editEmailId.getText())) {
+
+                    binding.editEmailId.setError("Please Enter EmailId");
+
+                }
                 else if (!isValidEmail(binding.editEmailId.getText().toString().trim())) {
 
                     binding.editEmailId.requestFocus();
                     binding.editEmailId.setError("Please Enter Valide Email id");
 
-                } else if (TextUtils.isEmpty(binding.editPassword.getText())) {
+                }
+                else if (TextUtils.isEmpty(binding.editPassword.getText())) {
 
                     binding.editPassword.setError("Please EnterYour password");
 
@@ -114,7 +115,7 @@ public class RegisterPage extends Fragment {
 
                     str_UserFullName = binding.editUserFullName.getText().toString().trim();
                     str_MobileNumber = binding.editMobileNumber.getText().toString().trim();
-                    str_EmailId = "email@fudhub.com";
+                    str_EmailId = binding.editEmailId.getText().toString().trim();;
                     str_Password = binding.editPassword.getText().toString().trim();
 
 

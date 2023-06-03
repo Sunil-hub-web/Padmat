@@ -158,6 +158,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                 Log.d("Frfbw_2", String.valueOf(CartPageFragment.sum));
                 double totsm = CartPageFragment.sum - CartPageFragment.coupon_amt;
                 CartPageFragment.tv_ship_price.setText("0");
+                CartPageFragment.deliverych = "0";
                 CartPageFragment.paybleamount.setText("₹" + totsm);
                 Log.d("Frfbw_3", String.valueOf(totsm));
 
@@ -168,6 +169,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                 Log.d("Frfbw_2", String.valueOf(CartPageFragment.sum));
                 String str_delivery_ch = String.valueOf(CartPageFragment.delivery_ch);
                 CartPageFragment.tv_ship_price.setText("50");
+                CartPageFragment.deliverych = "50";
                 double totsm = CartPageFragment.sum + 50.0 - CartPageFragment.coupon_amt;
 
                 CartPageFragment.paybleamount.setText("₹" + totsm);
