@@ -193,16 +193,14 @@
                                 android:layout_marginRight="@dimen/twenty"
                                 android:orientation="horizontal">
 
-                               <!-- <TextView
+                                <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
                                     android:text="Shipping"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/fifteen"
-                                    android:textStyle="normal" />-->
-
-
+                                    android:textStyle="normal" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -223,14 +221,14 @@
                                 android:layout_marginRight="@dimen/twenty"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <Spinner
                                     android:id="@+id/shippingchargename"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
                                     android:prompt="@string/prom"
                                     android:spinnerMode="dialog"
-                                    android:text="Delivery Charges"
+                                    android:text="Shipping"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/fifteen"
                                     android:textStyle="normal" />

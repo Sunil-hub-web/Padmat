@@ -22,5 +22,5 @@ dependencyResolutionManagement {
 
     }
 }
-rootProject.name = "FudHub"
+rootProject.name = "Padmat"
 include ':app'

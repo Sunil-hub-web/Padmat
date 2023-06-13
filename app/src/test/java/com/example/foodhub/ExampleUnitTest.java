@@ -1,4 +1,4 @@
-package com.example.foodhub;
+package com.padmat.newuser;
 
 import org.junit.Test;
 

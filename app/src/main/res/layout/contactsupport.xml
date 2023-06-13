@@ -62,7 +62,7 @@
                     android:layout_marginLeft="@dimen/twenty"
                     android:layout_toRightOf="@id/call"
                     android:drawablePadding="@dimen/twelve"
-                    android:text="123456789"
+                    android:text="9178143293"
                     android:textColor="@color/some_color"
                     android:textSize="@dimen/edittextsize"
                     android:fontFamily="@font/raleway">
@@ -108,7 +108,7 @@
                     android:layout_marginLeft="@dimen/twenty"
                     android:layout_toRightOf="@id/email"
                     android:drawablePadding="@dimen/twelve"
-                    android:text="foodhub@gmail.com"
+                    android:text="support@padmat.in"
                     android:textColor="@color/some_color"
                     android:textSize="@dimen/edittextsize"
                     android:fontFamily="@font/raleway">

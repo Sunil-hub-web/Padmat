@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FudHub</string>
+    <string name="app_name">PadMat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -7,6 +7,38 @@
 
     <string-array name="timearray1">
         <item>Select time slot</item>
+        <item> </item>
+        <!--        <item>12AM-1AM</item>-->
+        <!--        <item> </item>-->
+        <!--        <item>1AM-2AM</item>-->
+        <!--        <item> </item>-->
+        <!--        <item>2AM-3AM</item>-->
+        <!--        <item> </item>-->
+        <!--        <item>3AM-4AM</item>-->
+        <!--        <item> </item>-->
+        <!--        <item>4AM-5AM</item>-->
+        <item> </item>
+        <item>5AM-6AM</item>
+        <item> </item>
+        <item>6AM-7AM</item>
+        <item> </item>
+        <item>7AM-8AM</item>
+        <item> </item>
+        <item>8AM-9AM</item>
+        <item> </item>
+        <item>9AM-10AM</item>
+        <item> </item>
+        <item>10AM-11AM</item>
+        <item> </item>
+        <item>11AM-12PM</item>
+        <item> </item>
+        <item>12PM-1PM</item>
+        <item> </item>
+        <item>1PM-2PM</item>
+        <item> </item>
+        <item>2PM-3PM</item>
+        <item> </item>
+        <item>3PM-4PM</item>
         <item> </item>
         <item>4PM-5PM</item>
         <item> </item>
