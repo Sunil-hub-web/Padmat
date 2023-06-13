@@ -74,6 +74,7 @@ public class CartPageFragment extends Fragment {
     HashMap<String, String> deliverychargesprice = new HashMap<String, String>();
     SharedPreference sharedPreference;
     public static TextView paybleamount, tv_change, itemtotal, tv_ship_price, tv_checkout;
+    public static String deliverych;
     ViewDialog progressbar;
     SessionManager session;
     TextView shippingchargename;
